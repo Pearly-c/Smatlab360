@@ -29,6 +29,7 @@
 							<input type="text" name="name" placeholder="First Name" required="">
 							<input type="text" name="name" placeholder="Last Name" required="">
 							<input type="email" name="email" placeholder="Email" required="">
+							<input type="text" name="username" placeholder="Password" required="">
 							<input type="password" name="password" id="password1" placeholder="Password" required="">
 							<input type="password" name="password" id="password2" placeholder="Confirm Password" required="">
 							<input type="submit" value="Sign Up">
