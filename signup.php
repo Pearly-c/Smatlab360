@@ -25,14 +25,46 @@
 			<div class="inner_sec_info_wthree_agile">
 				<div class="signin-form">
 					<div class="login-form-rec">
-						<form action="#" method="post">
-							<input type="text" name="name" placeholder="First Name" required="">
-							<input type="text" name="name" placeholder="Last Name" required="">
+						<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>" method="POST">
+							<input type="text" name="firstname" placeholder="First Name" required="">
+							<input type="text" name="lastname" placeholder="Last Name" required="">
 							<input type="email" name="email" placeholder="Email" required="">
-							<input type="text" name="username" placeholder="Password" required="">
-							<input type="password" name="password" id="password1" placeholder="Password" required="">
-							<input type="password" name="password" id="password2" placeholder="Confirm Password" required="">
+							<input type="text" name="username" placeholder="Username" required="">
+							<input type="password" name="pwd" id="password1" placeholder="Password" required="">
+							<input type="password" name="confirmPwd" id="password2" placeholder="Confirm Password" required="">
 							<input type="submit" value="Sign Up">
+							<?php
+								//echo "working";
+								//session_start();
+								if($_SERVER["REQUEST_METHOD"] == "POST"){
+									$firstName = $_POST["firstname"];
+									$lastName = $_POST["lastname"];
+									$email = $_POST["email"];
+									$userName = $_POST["username"];
+									$pwd = $_POST["pwd"];
+									$confirmPassword = $_POST["confirmPwd"];
+									$servername = "localhost";
+									$dbname = "smatlab";
+									$password =  "";
+									$username = "root";
+									$conn = new mysqli($servername,$username, $password, $dbname);
+									
+									if(strcmp($pwd,$confirmPassword) != 0){
+										echo '<script>alert("password does not match")</script>';
+									}
+									else{
+										$sql = "INSERT INTO users (firstname, lastname, email, username, passwords) VALUES ('$firstName', '$lastName', '$email', '$userName', '$pwd')";
+										if($conn->query($sql)=== TRUE){
+											echo '<script>alert("successful")</script>'; 
+											header("Location: signin.php");
+										}
+										else{
+											echo "error:"." ".$sql."<br/>".$conn->error;
+										} 
+									} 
+									$conn->close();
+								}
+							?>
 						</form>
 					</div>
 					<p class="reg"><a href="#"> By clicking Signup, I agree to your terms</a></p>
