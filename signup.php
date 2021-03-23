@@ -43,6 +43,7 @@
 									$userName = $_POST["username"];
 									$pwd = $_POST["pwd"];
 									$confirmPassword = $_POST["confirmPwd"];
+									$refno = rand(100000, 999999);//referal code generator
 									$servername = "localhost";
 									$dbname = "smatlab";
 									$password =  "";
@@ -53,7 +54,7 @@
 										echo '<script>alert("password does not match")</script>';
 									}
 									else{
-										$sql = "INSERT INTO users (firstname, lastname, email, username, passwords) VALUES ('$firstName', '$lastName', '$email', '$userName', '$pwd')";
+										$sql = "INSERT INTO users (firstname, lastname, email, username, passwords, affcode) VALUES ('$firstName', '$lastName', '$email', '$userName', '$pwd', '$refno')";
 										if($conn->query($sql)=== TRUE){
 											echo '<script>alert("successful")</script>'; 
 											echo "<script>window.location.href='signin.php';</script>";
