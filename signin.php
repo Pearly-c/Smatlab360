@@ -24,12 +24,42 @@
 			<div class="inner_sec_info_wthree_agile">
 				<div class="signin-form">
 					<div class="login-form-rec">
-						<form action="#" method="post">
+						<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>" method="POST">
 							<input type="email" name="email" placeholder="E-mail" required="">
-							<input type="password" name="password" placeholder="Password" required="">
+							<input type="password" name="pwd" placeholder="Password" required="">
 							<div class="tp">
 								<input type="submit" value="Signin">
 							</div>
+							<?php
+								//session_start();
+								if($_SERVER["REQUEST_METHOD"] == "POST"){
+									$email = $_POST["email"];
+									$pwd = $_POST["pwd"];
+									$servername = "localhost";
+									$dbname = "smatlab";
+									$password =  "";
+									$username = "root";
+									$conn = new mysqli($servername,$username, $password, $dbname);
+									
+									$sql = "SELECT * FROM users WHERE email = '$email' AND passwords = '$pwd'";
+									if($conn->connect_error){
+										die("CONNECTION FAILED"." ".$conn->connect_error);
+									}
+									$result = $conn->query($sql); 
+									
+									if($result->num_rows > 0){
+										$_SESSION["email"] = $email;
+									while($row = $result->fetch_assoc()){
+		
+									}
+										header("Location: ");           
+									}
+									else{
+										echo '<script>alert("Failed to sign in")</script>';
+									}
+									$conn->close();
+								}
+							?>
 						</form>
 					</div>
 					<div class="login-social-grids">
