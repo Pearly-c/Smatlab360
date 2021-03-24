@@ -52,7 +52,7 @@
 									while($row = $result->fetch_assoc()){
 		
 									}
-										header("Location: ");           
+										echo "<script>window.location.href='profile/profile.php';</script>";         
 									}
 									else{
 										echo '<script>alert("Failed to sign in")</script>';

@@ -56,7 +56,7 @@
 										$sql = "INSERT INTO users (firstname, lastname, email, username, passwords) VALUES ('$firstName', '$lastName', '$email', '$userName', '$pwd')";
 										if($conn->query($sql)=== TRUE){
 											echo '<script>alert("successful")</script>'; 
-											echo "<script>window.location.href='userhistory.php?username=$userid';</script>";
+											echo "<script>window.location.href='signin.php';</script>";
 										}
 										else{
 											echo "error:"." ".$sql."<br/>".$conn->error;
