@@ -31,7 +31,7 @@
 								<input type="submit" value="Signin">
 							</div>
 							<?php
-								//session_start();
+								session_start();
 								if($_SERVER["REQUEST_METHOD"] == "POST"){
 									$email = $_POST["email"];
 									$pwd = $_POST["pwd"];
@@ -48,15 +48,56 @@
 									$result = $conn->query($sql); 
 									
 									if($result->num_rows > 0){
-										$_SESSION["email"] = $email;
-									while($row = $result->fetch_assoc()){
-		
-									}
-										echo "<script>window.location.href='profile/profile.php';</script>";         
+										
+										while($row = $result->fetch_assoc()){
+											$_SESSION["firstname"] = $row["firstname"];
+											$_SESSION["lastname"] = $row["lastname"];
+											$_SESSION["level"] = $row["level"];
+											
+										}
+										$_SESSION["firstname"];
+										$_SESSION["lastname"];
+										$_SESSION["level"];
+
+										$refcode = $_SESSION['refcode'];
+									
+										echo '<script>alert($refcode)</script>';
+										
+										echo "<script>window.location.href='profile/profile.php';</script>"; 
+									      
 									}
 									else{
 										echo '<script>alert("Failed to sign in")</script>';
 									}
+
+									//$refcode = $_SESSION['refcode'];
+									//echo 	$refcode;
+									//$sql = "SELECT id, firstname, lastname FROM users WHERE refBy = '$refcode'";
+									if($conn->connect_error){
+										die("CONNECTION FAILED"." ".$conn->connect_error);
+									}
+									$result = $conn->query($sql); 
+
+									echo '<script type="text/javascript"\>
+										alert("ok");
+									</script>';
+
+									if($result->num_rows > 0){
+										while($row = $result->fetch_assoc()){
+											
+											'<script type="text/javascript"\>
+												ref_table.innerHTML .= <tr><th scope="row">$row["id"]</th><td>$row["firstname"]</td><td>$row["lastname"]</td></tr>
+											</script>';
+											
+										}
+										
+										echo "<script type='text/javascript'\>ref_table.innerHTML;</script>"; 
+									      
+									}
+									else{
+										echo "<script type='text/javascript'\>ref_table.innerHTML = 'No referal yet';</script>";
+									}
+									
 									$conn->close();
 								}
 							?>

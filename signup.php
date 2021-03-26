@@ -30,30 +30,35 @@
 							<input type="text" name="lastname" placeholder="Last Name" required="">
 							<input type="email" name="email" placeholder="Email" required="">
 							<input type="text" name="username" placeholder="Username" required="">
+							<input type="text" name="referal" placeholder="Referal Code (Optional)" >
 							<input type="password" name="pwd" id="password1" placeholder="Password" required="">
 							<input type="password" name="confirmPwd" id="password2" placeholder="Confirm Password" required="">
 							<input type="submit" value="Sign Up">
 							<?php
 								//echo "working";
-								//session_start();
+								session_start();
 								if($_SERVER["REQUEST_METHOD"] == "POST"){
 									$firstName = $_POST["firstname"];
 									$lastName = $_POST["lastname"];
 									$email = $_POST["email"];
 									$userName = $_POST["username"];
+									$ref_by = $_POST["referal"];
 									$pwd = $_POST["pwd"];
 									$confirmPassword = $_POST["confirmPwd"];
 									$servername = "localhost";
 									$dbname = "smatlab";
-									$password =  "";
+									//$password =  "";
 									$username = "root";
+									$refcode = rand(100000,999999);
+									$_SESSION["refcode"] = $refcode;
 									$conn = new mysqli($servername,$username, $password, $dbname);
 									
 									if(strcmp($pwd,$confirmPassword) != 0){
 										echo '<script>alert("password does not match")</script>';
 									}
 									else{
-										$sql = "INSERT INTO users (firstname, lastname, email, username, passwords) VALUES ('$firstName', '$lastName', '$email', '$userName', '$pwd')";
+										//$password = md5($pwd);
+										$sql = "INSERT INTO users (firstname, lastname, email, username, passwords, refBy, refcode) VALUES ('$firstName', '$lastName', '$email', '$userName', '$pwd', '$ref_by', '$refcode')";
 										if($conn->query($sql)=== TRUE){
 											echo '<script>alert("successful")</script>'; 
 											echo "<script>window.location.href='signin.php';</script>";

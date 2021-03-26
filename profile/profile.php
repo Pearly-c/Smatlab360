@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -27,12 +28,21 @@
                             <img src="img/jordan.jpg" alt=""> 
                         </div>
                         <div class="profile-nav-info">
-                            <h3 class="user-name">Helen Paul</h3>
+                            <h3 class="user-name">
+                                <?php
+                                    session_start();
+                                    echo $_SESSION["firstname"] . " ". $_SESSION["lastname"]; 
+                                ?>
+                            </h3>
                             <div class="address">
                                 <p class="state" style="color: #212237;">
                                     Level:
                                 </p>
-                                <span class="country" style="color: #2ecc71;">One</span>
+                                <span class="country" style="color: #2ecc71;">
+                                    <?php
+                                        echo $_SESSION["level"]; 
+                                    ?>
+                                </span>
                             </div>
                         </div>
 
@@ -89,38 +99,42 @@
                                                 <div class="content">
                                                     <table class="table">
                                                         <tbody>
+                                <?php
+                                $id = $_SESSION['email'];
+								$stmt =	$conn->prepare("SELECT * FROM users WHERE refBy = ?");
+								$stmt = bind_param("s", $id);
+								$stmt->execute;
+								$result = $stmt->get_result();
+								while ($row = $result->fetch_assoc())  { ?>
                                                             <tr>
                                                             <th scope="row">1</th>
-                                                            <td>Mark</td>
-                                                            <td><a href="" class="btn btn-primary">Edit</a></td>
-                                                            <td><a href="" class="btn btn-danger">Delete</a></td>
+                                                            <td><?php echo $row["firstname"]; ?></td>
+
                                                             </tr>
+                                }
+                                
                                                             <tr>
                                                             <th scope="row">2</th>
                                                             <td>Jacob</td>
-                                                            <td><a href="" class="btn btn-primary">Edit</a></td>
-                                                            <td><a href="" class="btn btn-danger">Delete</a></td>
+                                                          
                                                             </tr>
                                                             <tr>
                                                             <th scope="row">3</th>
                                                             <td>Jacob</td>
-                                                            <td><a href="" class="btn btn-primary">Edit</a></td>
-                                                            <td><a href="" class="btn btn-danger">Delete</a></td>
+                                                          
                                                             </tr>
                                                             <tr>
                                                             <th scope="row">4</th>
                                                             <td>Jacob</td>
-                                                            <td><a href="" class="btn btn-primary">Edit</a></td>
-                                                            <td><a href="" class="btn btn-danger">Delete</a></td>
+                                                       
                                                             </tr>
                                                             <tr>
                                                             <th scope="row">4</th>
                                                             <td>Jacob</td>
-                                                            <td><a href="" class="btn btn-primary">Edit</a></td>
-                                                            <td><a href="" class="btn btn-danger">Delete</a></td>
+                                                
                                                             </tr>
                                                         </tbody>
-                                                    </table>        
+                                                    </table>      
                                                 </div>
                                             </div>
                                         </div>
