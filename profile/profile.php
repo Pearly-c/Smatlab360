@@ -99,40 +99,24 @@
                                                 <div class="content">
                                                     <table class="table">
                                                         <tbody>
-                                <?php
-                                $id = $_SESSION['email'];
-								$stmt =	$conn->prepare("SELECT * FROM users WHERE refBy = ?");
-								$stmt = bind_param("s", $id);
-								$stmt->execute;
-								$result = $stmt->get_result();
-								while ($row = $result->fetch_assoc())  { ?>
-                                                            <tr>
-                                                            <th scope="row">1</th>
-                                                            <td><?php echo $row["firstname"]; ?></td>
-
-                                                            </tr>
-                                }
-                                
-                                                            <tr>
-                                                            <th scope="row">2</th>
-                                                            <td>Jacob</td>
-                                                          
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">3</th>
-                                                            <td>Jacob</td>
-                                                          
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">4</th>
-                                                            <td>Jacob</td>
-                                                       
-                                                            </tr>
-                                                            <tr>
-                                                            <th scope="row">4</th>
-                                                            <td>Jacob</td>
-                                                
-                                                            </tr>
+                                                            <?php
+                                                                $id = $_SESSION['email'];
+                                                                $stmt =	$conn->prepare("SELECT * FROM users WHERE refBy = ?");
+                                                                $stmt = bind_param("s", $id);
+                                                                $stmt->execute;
+                                                                $result = $stmt->get_result();
+                                                                while ($row = $result->fetch_assoc()){} 
+                                                            ?>
+                                                                    <tr>
+                                                                        <th scope="row">1</th>
+                                                                        <td><?php echo $row["firstname"]; ?></td>
+                                                                        <td><?php echo $row["lastname"]; ?></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">1</th>
+                                                                        <td>twg</td>
+                                                                        <td>r32</td>
+                                                                    </tr>    
                                                         </tbody>
                                                     </table>      
                                                 </div>
