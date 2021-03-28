@@ -1,4 +1,23 @@
+<?php 
+   session_start(); 
 
+include('errors.php'); 
+
+$errors = array(); 
+
+
+   if (!isset($_SESSION['username'])) {
+      $_SESSION['msg'] = "You must log in first";
+      header('location: ../signin.php');
+   }
+
+   if (isset($_GET['logout'])) {
+      session_destroy();
+      unset($_SESSION['username']);
+      header("location: ../signin.php");
+   }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -22,34 +41,37 @@
         <main>
             <!--Profile-->
            <section>
-                <div class="x-container">
-                    <div class="profile-header">
-                        <div class="profile-img">
-                            <img src="img/jordan.jpg" alt=""> 
+<?php
+include('../db.php');
+$uploaduser = $_SESSION['username'];
+$stmt =$conn->prepare("SELECT * FROM users WHERE username=?");
+$stmt->bind_param("s", $uploaduser);
+$stmt->execute();
+$row = $stmt->get_result();
+while ($result= $row->fetch_assoc()) {
+    echo "<div class='x-container'>
+                    <div class='profile-header'>
+                        <div class='profile-img'>
+                            <img src='images/".$result['picimage']."' alt='Image' />
                         </div>
-                        <div class="profile-nav-info">
-                            <h3 class="user-name">
-                                <?php
-                                    session_start();
-                                    echo $_SESSION["firstname"] . " ". $_SESSION["lastname"]; 
-                                ?>
-                            </h3>
-                            <div class="address">
-                                <p class="state" style="color: #212237;">
-                                    Level:
+                        <div class='profile-nav-info'>
+                            <h3 class='user-name'>  $result[firstname] $result[lastname]</h3>
+                            <div class='address'>
+                                <p class='state' style='color: #212237;'>
+                                    Level: $result[level]
                                 </p>
-                                <span class="country" style="color: #2ecc71;">
-                                    <?php
-                                        echo $_SESSION["level"]; 
-                                    ?>
+                                <span class='country' style='color: #2ecc71;'>
+                                    $result[level]
                                 </span>
                             </div>
                         </div>
 
-                        <div class="account">
+                        <div class='account'>
                             <h3>Balance</h3>
-                            <span>40,000</span>
-                        </div>
+                            <span>$result[balance]</span>
+                        </div>";
+                    }
+                ?>
                         
                         <div id="hamburger" onclick="openNav()">
                             <div></div>
@@ -59,11 +81,12 @@
                         <div id="myNav" class="overlay">
                             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                             <div class="overlay-content">
-                                <a href="#" onclick="closeNav()">Home</a>
+                                <a href="../index.php" onclick="closeNav()">Home</a>
                                 <a href="contact.html">Entrepreneur</a>
                                 <a href="faq.html">Deposit</a>
                                 <a href="faq.html">withdrawal</a>
                                 <a href="faq.html">Support</a>
+                                <a href="logout.php">logout</a>
                             </div>
                         </div>
                     </div>
@@ -85,6 +108,7 @@
                         <span>Deposit</span><br><br>
                         <span>withdrawal</span><br><br>
                         <span>Support</span><br>
+                        <a href="logout.php">logout</a>
                     </div>
                     <div class="referals">
                         <div><h3>Referrals</h3></div><br>
@@ -99,19 +123,18 @@
                                                 <div class="content">
                                                     <table class="table">
                                                 <tbody>
-                                    <?php
-                                        $id = $_SESSION['username'];
-                                        $stmt =	$conn->prepare("SELECT * FROM users WHERE refBy = ?");
-                                        $stmt = bind_param("s", $id);
-                                        $stmt->execute;
-                                        $result = $stmt->get_result();
-                                        while ($row = $result->fetch_assoc()){} 
-                                    ?>
+                         <?php
+include('../db.php');
+$count=1;
+$sel_query="SELECT * FROM users ORDER BY id desc;";
+$result = mysqli_query($conn,$sel_query);
+while($row = mysqli_fetch_assoc($result)) { ?>          
                         <tr>
                             <th scope="row">1</th>
                             <td><?php echo $row["firstname"]; ?></td>
                             <td><?php echo $row["lastname"]; ?></td>
                         </tr>
+<?php $count++; } ?>
                         <tr>
                             <th scope="row">1</th>
                             <td>twg</td>

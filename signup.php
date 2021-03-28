@@ -25,51 +25,18 @@
 			<div class="inner_sec_info_wthree_agile">
 				<div class="signin-form">
 					<div class="login-form-rec">
-						<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>" method="POST">
-							<input type="text" name="firstname" placeholder="First Name" required="">
-							<input type="text" name="lastname" placeholder="Last Name" required="">
+						<form action="server.php" method="POST" enctype="multipart/form-data">
+							<input type="text" name="fname" placeholder="First Name" required="">
+							<input type="text" name="lname" placeholder="Last Name" required="">
 							<input type="email" name="email" placeholder="Email" required="">
 							<input type="text" name="username" placeholder="Username" required="">
 							<input type="text" name="phone" placeholder="Phone Number" required="">
 							<input type="file" name="image" required="">
 							<input type="text" name="referal" placeholder="Referal Code (Optional)" >
-							<input type="password" name="pwd" id="password1" placeholder="Password" required="">
-							<input type="password" name="confirmPwd" id="password2" placeholder="Confirm Password" required="">
-							<input type="submit" value="Sign Up">
-							<?php
-							include('db.php');
-								//echo "working";
-								if($_SERVER["REQUEST_METHOD"] == "POST"){
-									$firstname = $_POST["firstname"];
-									$lastname = $_POST["lastname"];
-									$email = $_POST["email"];
-									$username = $_POST["username"];
-									$ref_by = $_POST["referal"];
-									$pwd = $_POST["pwd"];
-									$confirmPassword = $_POST["confirmPwd"];
-									$refcode = rand(100000,999999);//referal code generator
-									$balance = "";
-									$level = "One"; 
-									
-									if(strcmp($pwd,$confirmPassword) != 0){
-										echo '<script>alert("password does not match")</script>';
-									}
-									else{
-
-										$password = md5($pwd);
-										$sql = "INSERT INTO users (firstname, lastname, email, username, passwords, level, affcode, refBy, balance) VALUES ('$firstname', '$lastname', '$email', '$username', '$password', '$level', '$refcode', '$ref_by', $balance, )";
-
-										if($conn->query($sql)=== TRUE){
-											echo '<script>alert("successful")</script>'; 
-											echo "<script>window.location.href='signin.php';</script>";
-										}
-										else{
-											echo "error:"." ".$sql."<br/>".$conn->error;
-										} 
-									} 
-									$conn->close();
-								}
-							?>
+							<input type="password" name="password1" id="password1" placeholder="Password" required="">
+							<input type="password" name="password2" id="password2" placeholder="Confirm Password" required="">
+							<input type="submit" value="Sign Up" name="submit">
+							
 						</form>
 					</div>
 					<p class="reg"><a href="#"> By clicking Signup, I agree to your terms</a></p>

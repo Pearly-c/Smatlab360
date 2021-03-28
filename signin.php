@@ -19,88 +19,19 @@
 	<div class="banner_bottom">
 		<div class="container">
 			<div class="tittle-w3ls_head">
-				<h3 class="tittle-w3ls three">SignIn to <span>your Account </span></h3>
+				<h3 class="tittle-w3ls three">SignIn to <span>your Account </span></h3><br>
+				<?php include('errors.php'); ?>
 			</div>
 			<div class="inner_sec_info_wthree_agile">
 				<div class="signin-form">
 					<div class="login-form-rec">
-						<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>" method="POST">
-							<input type="email" name="email" placeholder="E-mail" required="">
-							<input type="password" name="pwd" placeholder="Password" required="">
+						<form action="server.php" method="POST">
+							<input type="text" name="username" placeholder="Username" required="">
+							<input type="password" name="password" placeholder="Password" required="">
 							<div class="tp">
-								<input type="submit" value="Signin">
+								<input type="submit" name="login" value="Signin">
 							</div>
-							<?php
-								session_start();
-								if($_SERVER["REQUEST_METHOD"] == "POST"){
-									$email = $_POST["email"];
-									$pwd = $_POST["pwd"];
-									$servername = "localhost";
-									$dbname = "smatlab";
-									$password =  "";
-									$username = "root";
-									$conn = new mysqli($servername,$username, $password, $dbname);
-									
-									$sql = "SELECT * FROM users WHERE email = '$email' AND passwords = '$pwd'";
-									if($conn->connect_error){
-										die("CONNECTION FAILED"." ".$conn->connect_error);
-									}
-									$result = $conn->query($sql); 
-									
-									if($result->num_rows > 0){
-										
-										while($row = $result->fetch_assoc()){
-											$_SESSION["firstname"] = $row["firstname"];
-											$_SESSION["lastname"] = $row["lastname"];
-											$_SESSION["level"] = $row["level"];
-											
-										}
-										$_SESSION["firstname"];
-										$_SESSION["lastname"];
-										$_SESSION["level"];
-
-										$refcode = $_SESSION['refcode'];
-									
-										echo '<script>alert($refcode)</script>';
-										
-										echo "<script>window.location.href='profile/profile.php';</script>"; 
-									      
-									}
-									else{
-										echo '<script>alert("Failed to sign in")</script>';
-									}
-
-									//$refcode = $_SESSION['refcode'];
-									//echo 	$refcode;
-									//$sql = "SELECT id, firstname, lastname FROM users WHERE refBy = '$refcode'";
-									if($conn->connect_error){
-										die("CONNECTION FAILED"." ".$conn->connect_error);
-									}
-									$result = $conn->query($sql); 
-
-									echo '<script type="text/javascript"\>
-										alert("ok");
-									</script>';
-
-									if($result->num_rows > 0){
-										while($row = $result->fetch_assoc()){
-											
-											'<script type="text/javascript"\>
-												ref_table.innerHTML .= <tr><th scope="row">$row["id"]</th><td>$row["firstname"]</td><td>$row["lastname"]</td></tr>
-											</script>';
-											
-										}
-										
-										echo "<script type='text/javascript'\>ref_table.innerHTML;</script>"; 
-									      
-									}
-									else{
-										echo "<script type='text/javascript'\>ref_table.innerHTML = 'No referal yet';</script>";
-									}
-									
-									$conn->close();
-								}
-							?>
+							
 						</form>
 					</div>
 					<div class="login-social-grids">

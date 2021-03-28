@@ -198,22 +198,22 @@
 				<div class="ser-first">
 					<div class="col-md-3 ser-first-grid text-center">
 						<span class="fa fa-shield" aria-hidden="true"></span>
-						<h3>How Do I Learn</h3>
+						<h3>Register</h3>
 						<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
 					</div>
 					<div class="col-md-3 ser-first-grid text-center">
 						<span class="fa fa-pencil" aria-hidden="true"></span>
-						<h3>Different Layout</h3>
+						<h3>Refer</h3>
 						<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
 					</div>
 					<div class="col-md-3 ser-first-grid text-center">
 						<span class="fa fa-star" aria-hidden="true"></span>
-						<h3>Portfolio Styles</h3>
+						<h3>Earn</h3>
 						<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
 					</div>
 					<div class="col-md-3 ser-first-grid text-center">
 						<span class="fa fa-thumbs-up" aria-hidden="true"></span>
-						<h3>User Experience</h3>
+						<h3>Withdral</h3>
 						<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
 					</div>
 					<div class="clearfix"></div>
