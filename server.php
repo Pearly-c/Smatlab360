@@ -1,4 +1,11 @@
 <?php
+  session_start();
+
+  // variable declaration
+  $username = "";
+  $email    = "";
+  $errors = array(); 
+  $_SESSION['success'] = "";
 include('db.php');
 
       if (isset($_POST['submit'])) {
@@ -40,6 +47,7 @@ include('db.php');
                  VALUES(?,?,?,?,?,?,?,?,?,?)");
          $stmt->bind_param("ssssssssss", $firstname, $lastname, $email, $username, $password, $level, $refcode, $ref_by, $balance, $image);
          $stmt->execute();
+         $_SESSION['username'] = $username;
          header('location:success.php');
 
    }else{
