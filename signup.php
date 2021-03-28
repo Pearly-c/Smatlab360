@@ -30,37 +30,34 @@
 							<input type="text" name="lastname" placeholder="Last Name" required="">
 							<input type="email" name="email" placeholder="Email" required="">
 							<input type="text" name="username" placeholder="Username" required="">
+							<input type="text" name="phone" placeholder="Phone Number" required="">
+							<input type="file" name="image" required="">
 							<input type="text" name="referal" placeholder="Referal Code (Optional)" >
 							<input type="password" name="pwd" id="password1" placeholder="Password" required="">
 							<input type="password" name="confirmPwd" id="password2" placeholder="Confirm Password" required="">
 							<input type="submit" value="Sign Up">
 							<?php
+							include('db.php');
 								//echo "working";
-								session_start();
 								if($_SERVER["REQUEST_METHOD"] == "POST"){
-									$firstName = $_POST["firstname"];
-									$lastName = $_POST["lastname"];
+									$firstname = $_POST["firstname"];
+									$lastname = $_POST["lastname"];
 									$email = $_POST["email"];
-									$userName = $_POST["username"];
+									$username = $_POST["username"];
 									$ref_by = $_POST["referal"];
 									$pwd = $_POST["pwd"];
 									$confirmPassword = $_POST["confirmPwd"];
-									$refno = rand(100000, 999999);//referal code generator
-									$servername = "localhost";
-									$dbname = "smatlab";
-									//$password =  "";
-									$username = "root";
-									$refcode = rand(100000,999999);
-									$_SESSION["refcode"] = $refcode;
-									$conn = new mysqli($servername,$username, $password, $dbname);
+									$refcode = rand(100000,999999);//referal code generator
+									$balance = "";
+									$level = "One"; 
 									
 									if(strcmp($pwd,$confirmPassword) != 0){
 										echo '<script>alert("password does not match")</script>';
 									}
 									else{
 
-										//$password = md5($pwd);
-										$sql = "INSERT INTO users (firstname, lastname, email, username, passwords, refBy, refcode) VALUES ('$firstName', '$lastName', '$email', '$userName', '$pwd', '$ref_by', '$refcode')";
+										$password = md5($pwd);
+										$sql = "INSERT INTO users (firstname, lastname, email, username, passwords, level, affcode, refBy, balance) VALUES ('$firstname', '$lastname', '$email', '$username', '$password', '$level', '$refcode', '$ref_by', $balance, )";
 
 										if($conn->query($sql)=== TRUE){
 											echo '<script>alert("successful")</script>'; 

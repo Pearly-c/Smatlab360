@@ -98,85 +98,85 @@
                                                 <div class="label" style="color: #e40046;">Referrals</div>
                                                 <div class="content">
                                                     <table class="table">
-                                                        <tbody>
-                                                            <?php
-                                                                $id = $_SESSION['email'];
-                                                                $stmt =	$conn->prepare("SELECT * FROM users WHERE refBy = ?");
-                                                                $stmt = bind_param("s", $id);
-                                                                $stmt->execute;
-                                                                $result = $stmt->get_result();
-                                                                while ($row = $result->fetch_assoc()){} 
-                                                            ?>
-                                                                    <tr>
-                                                                        <th scope="row">1</th>
-                                                                        <td><?php echo $row["firstname"]; ?></td>
-                                                                        <td><?php echo $row["lastname"]; ?></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th scope="row">1</th>
-                                                                        <td>twg</td>
-                                                                        <td>r32</td>
-                                                                    </tr>    
-                                                        </tbody>
-                                                    </table>      
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="accordion">
-                                            <div class="content-box">
-                                                <div class="label" style="color: #e40046;">Transaction history</div>
-                                                <div class="content">
-                                                    <div class="table-responsive">
-                                                        <table class="table">
-                                                            <tbody>
-                                                                <tr>
-                                                                <th scope="row">1</th>
-                                                                <td>Mark</td>
-                                                                <td><a href="" class="btn btn-primary">Edit</a></td>
-                                                                <td><a href="" class="btn btn-danger">Delete</a></td>
-                                                                </tr>
-                                                                <tr>
-                                                                <th scope="row">2</th>
-                                                                <td>Jacob</td>
-                                                                <td><a href="" class="btn btn-primary">Edit</a></td>
-                                                                <td><a href="" class="btn btn-danger">Delete</a></td>
-                                                                </tr>
-                                                                <tr>
-                                                                <th scope="row">3</th>
-                                                                <td>Jacob</td>
-                                                                <td><a href="" class="btn btn-primary">Edit</a></td>
-                                                                <td><a href="" class="btn btn-danger">Delete</a></td>
-                                                                </tr>
-                                                                <tr>
-                                                                <th scope="row">4</th>
-                                                                <td>Jacob</td>
-                                                                <td><a href="" class="btn btn-primary">Edit</a></td>
-                                                                <td><a href="" class="btn btn-danger">Delete</a></td>
-                                                                </tr>
-                                                                <tr>
-                                                                <th scope="row">4</th>
-                                                                <td>Jacob</td>
-                                                                <td><a href="" class="btn btn-primary">Edit</a></td>
-                                                                <td><a href="" class="btn btn-danger">Delete</a></td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>   
-                                                    </div>     
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
-                </div>
-            </section>
-            <!---Referals End-->
-        </main>
-        <!--- Script Source Files -->
+                                                <tbody>
+                                    <?php
+                                        $id = $_SESSION['username'];
+                                        $stmt =	$conn->prepare("SELECT * FROM users WHERE refBy = ?");
+                                        $stmt = bind_param("s", $id);
+                                        $stmt->execute;
+                                        $result = $stmt->get_result();
+                                        while ($row = $result->fetch_assoc()){} 
+                                    ?>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td><?php echo $row["firstname"]; ?></td>
+                            <td><?php echo $row["lastname"]; ?></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>twg</td>
+                            <td>r32</td>
+                        </tr>    
+            </tbody>
+        </table>      
+    </div>
+</div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="accordion">
+<div class="content-box">
+    <div class="label" style="color: #e40046;">Transaction history</div>
+    <div class="content">
+        <div class="table-responsive">
+            <table class="table">
+                <tbody>
+                    <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td><a href="" class="btn btn-primary">Edit</a></td>
+                    <td><a href="" class="btn btn-danger">Delete</a></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td><a href="" class="btn btn-primary">Edit</a></td>
+                    <td><a href="" class="btn btn-danger">Delete</a></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">3</th>
+                    <td>Jacob</td>
+                    <td><a href="" class="btn btn-primary">Edit</a></td>
+                    <td><a href="" class="btn btn-danger">Delete</a></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">4</th>
+                    <td>Jacob</td>
+                    <td><a href="" class="btn btn-primary">Edit</a></td>
+                    <td><a href="" class="btn btn-danger">Delete</a></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">4</th>
+                    <td>Jacob</td>
+                    <td><a href="" class="btn btn-primary">Edit</a></td>
+                    <td><a href="" class="btn btn-danger">Delete</a></td>
+                    </tr>
+                </tbody>
+            </table>   
+        </div>     
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> 
+</div>
+</section>
+<!---Referals End-->
+</main>
+<!--- Script Source Files -->
         <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
         <script src="js/profile.js"></script>
         <!--- End of Script Source Files -->
