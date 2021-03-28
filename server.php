@@ -20,7 +20,7 @@ include('db.php');
       $password_2 = mysqli_real_escape_string($conn, $_POST['password2']);
       $refcode = rand(100000,999999);//referal code generator
       $balance = "";
-      $level = "One";   
+      $level = "Starter";   
       
 
 

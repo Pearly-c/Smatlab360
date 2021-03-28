@@ -58,7 +58,7 @@ while ($result= $row->fetch_assoc()) {
                             <h3 class='user-name'>  $result[firstname] $result[lastname]</h3>
                             <div class='address'>
                                 <p class='state' style='color: #212237;'>
-                                    Level: $result[level]
+                                    Level: 
                                 </p>
                                 <span class='country' style='color: #2ecc71;'>
                                     $result[level]
@@ -125,10 +125,11 @@ while ($result= $row->fetch_assoc()) {
                                                 <tbody>
                          <?php
 include('../db.php');
+
 $count=1;
 $sel_query="SELECT * FROM users ORDER BY id desc;";
 $result = mysqli_query($conn,$sel_query);
-while($row = mysqli_fetch_assoc($result)) { ?>          
+while($row = mysqli_fetch_assoc($result)) { ?>        
                         <tr>
                             <th scope="row">1</th>
                             <td><?php echo $row["firstname"]; ?></td>

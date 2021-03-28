@@ -213,7 +213,7 @@
 					</div>
 					<div class="col-md-3 ser-first-grid text-center">
 						<span class="fa fa-thumbs-up" aria-hidden="true"></span>
-						<h3>Withdral</h3>
+						<h3>Withdrawal</h3>
 						<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
 					</div>
 					<div class="clearfix"></div>
