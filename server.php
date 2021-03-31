@@ -19,7 +19,7 @@ include('db.php');
       $image = $_FILES['image']['name'];
       $password_2 = mysqli_real_escape_string($conn, $_POST['password2']);
       $refcode = rand(100000,999999);//referal code generator
-      $balance = "";
+      $balance = "0.00";
       $level = "Starter";   
       
 

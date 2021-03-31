@@ -8,6 +8,7 @@ $errors = array();
 
    if (!isset($_SESSION['username'])) {
       $_SESSION['msg'] = "You must log in first";
+      $ref = $_SESSION['affcode'];
       header('location: ../signin.php');
    }
 
@@ -43,6 +44,7 @@ $errors = array();
            <section>
 <?php
 include('../db.php');
+
 $uploaduser = $_SESSION['username'];
 $stmt =$conn->prepare("SELECT * FROM users WHERE username=?");
 $stmt->bind_param("s", $uploaduser);
@@ -71,6 +73,7 @@ while ($result= $row->fetch_assoc()) {
                             <span>$result[balance]</span>
                         </div>";
                     }
+
                 ?>
                         
                         <div id="hamburger" onclick="openNav()">
@@ -125,22 +128,31 @@ while ($result= $row->fetch_assoc()) {
                                                 <tbody>
                          <?php
 include('../db.php');
+$uploaduser = $_SESSION['username'];
+$query = "SELECT * FROM users WHERE username='$uploaduser'";
+$run_query = mysqli_query($conn, $query);
+while($res = mysqli_fetch_assoc($run_query)) {
+
+
+
+$name = $res['firstname'];
+$email = $res['email'];
+$ref = $res['affcode'];
+}
 
 $count=1;
-$sel_query="SELECT * FROM users ORDER BY id desc;";
-$result = mysqli_query($conn,$sel_query);
-while($row = mysqli_fetch_assoc($result)) { ?>        
+$stmt =$conn->prepare("SELECT * FROM users WHERE refBy=?");
+$stmt->bind_param("s", $ref);
+$stmt->execute();
+$result = $stmt->get_result();
+while ($row = $result->fetch_assoc()) { ?>       
                         <tr>
                             <th scope="row">1</th>
                             <td><?php echo $row["firstname"]; ?></td>
                             <td><?php echo $row["lastname"]; ?></td>
                         </tr>
 <?php $count++; } ?>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>twg</td>
-                            <td>r32</td>
-                        </tr>    
+  
             </tbody>
         </table>      
     </div>
