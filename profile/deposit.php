@@ -42,36 +42,34 @@ $errors = array();
         <main>
             <!--Profile-->
            <section>
-<?php
-include('../db.php');
-
-$uploaduser = $_SESSION['username'];
-$stmt =$conn->prepare("SELECT * FROM users WHERE username=?");
-$stmt->bind_param("s", $uploaduser);
-$stmt->execute();
-$row = $stmt->get_result();
-while ($result= $row->fetch_assoc()) {
-    echo "<div class='x-container'>
-                    <div class='profile-header'>
-                        <div class='profile-img'>
-                            <img src='images/".$result['picimage']."' alt='Image' />
-                        </div>
-                        <div class='profile-nav-info'>
-                            <h3 class='user-name'>  $result[firstname] $result[lastname]</h3>
-                            <div class='address'>
-                                <p class='state' style='color: #212237;'>
-                                    Level: 
-                                </p>
-                                <span class='country' style='color: #2ecc71;'>
-                                    $result[level]
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class='account'>
-                            <h3>Balance</h3>
-                            <span>$result[balance]</span>
-                        </div>";
+                <?php
+                    include('../db.php');   
+                    $uploaduser = $_SESSION['username'];
+                    $stmt =$conn->prepare("SELECT * FROM users WHERE username=?");
+                    $stmt->bind_param("s", $uploaduser);
+                    $stmt->execute();
+                    $row = $stmt->get_result();
+                    while ($result= $row->fetch_assoc()) {
+                        echo "<div class='x-container'>
+                                <div class='profile-header'>
+                                    <div class='profile-img'>
+                                        <img src='images/".$result['picimage']."' alt='Image' />
+                                    </div>
+                                <div class='profile-nav-info'>
+                                    <h3 class='user-name'>  $result[firstname] $result[lastname]</h3>
+                                    <div class='address'>
+                                        <p class='state' style='color: #212237;'>
+                                            Level: 
+                                        </p>
+                                        <span class='country' style='color: #2ecc71;'>
+                                            $result[level]
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class='account'>
+                                    <h3>Balance</h3>
+                                    <span>$result[balance]</span>
+                                </div>";
                     }
 
                 ?>
@@ -86,8 +84,8 @@ while ($result= $row->fetch_assoc()) {
                             <div class="overlay-content">
                                 <a href="../index.php" onclick="closeNav()">Home</a>
                                 <a href="contact.html">Entrepreneur</a>
-                                <a href="faq.html">Deposit</a>
-                                <a href="faq.html">withdrawal</a>
+                                <a href="deposit.php">Deposit</a>
+                                <a href="withdraw.php">withdrawal</a>
                                 <a href="faq.html">Support</a>
                                 <a href="logout.php">logout</a>
                             </div>
@@ -108,31 +106,32 @@ while ($result= $row->fetch_assoc()) {
                     <div class="menu">
                         <span>Home</span><br><br>
                         <span>Entrepreneur</span><br><br>
-                        <span>Deposit</span><br><br>
-                        <span>withdrawal</span><br><br>
-                        <span>Support</span><br>
-                        <a href="logout.php">logout</a>
+                        <span><a href="deposit.php" style="color: white;">Deposit</a></span><br><br>
+                        <span><a href="withdraw.php" style="color: white;">withdrawal</a></span><br><br>
+                        <span>Support</span><br><br>
+                        <span><a href="logout.php" style="color: white;">logout</a></span>
                     </div>
                     <div class="referals">
-                        <div><h3>Referrals</h3></div><br>
+                        <div><h3>Deposit</h3></div><br>
                      
                         <div>
-                            <div class="main-bd">
+                            <div class="main-bd" style="display: block;">
                                 <div class="row">
-                             
-<div class="col-md-12">
-<form>
-    <p>Amount: <input type="number" name=""></p>
-    <p><input type="Submit" name="submit"></p>
-</form>
-</div>
-</div>
-</div>
-</div>
-</div> 
-</div>
-</section>
-<!---Referals End-->
+                                    <div class="col-md-12">
+                                        <form>
+                                            <div style="text-align: center;">
+                                                <p><input type="number" name="" placeholder="Enter Amount" style="width: 60%; padding: 5px 0px 5px 15px; color: black; outline: none;"></p>
+                                                <input type="Submit" name="submit" class="btn" style="background-color: #212237; color:white; ">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </section>
+            <!---Referals End-->
 </main>
 <!--- Script Source Files -->
         <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
