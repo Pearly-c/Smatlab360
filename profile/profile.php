@@ -86,8 +86,8 @@ while ($result= $row->fetch_assoc()) {
                             <div class="overlay-content">
                                 <a href="../index.php" onclick="closeNav()">Home</a>
                                 <a href="contact.html">Entrepreneur</a>
-                                <a href="faq.html">Deposit</a>
-                                <a href="faq.html">withdrawal</a>
+                                <span><a href="deposit.php">Deposit</a></span><br><br>
+                                <span><a href="withdraw.php">withdrawal</a></span><br><br>
                                 <a href="faq.html">Support</a>
                                 <a href="logout.php">logout</a>
                             </div>
@@ -104,14 +104,14 @@ while ($result= $row->fetch_assoc()) {
             <!--Profile End-->       
            <!---Referals-->
            <section class="bio">
-                <div class="my-row">
-                    <div class="menu">
+                <div class="my-row" style="height: auto; overflow: hidden;">
+                    <div class="menu" >
                         <span>Home</span><br><br>
                         <span>Entrepreneur</span><br><br>
-                        <span>Deposit</span><br><br>
-                        <span>withdrawal</span><br><br>
-                        <span>Support</span><br>
-                        <a href="logout.php">logout</a>
+                        <span><a href="deposit.php" style="color: white;">Deposit</a></span><br><br>
+                        <span><a href="withdraw.php" style="color: white;">withdrawal</a></span><br><br>
+                        <span>Support</span><br><br>
+                        <span><a href="logout.php" style="color: white;">logout</a></span><br><br>
                     </div>
                     <div class="referals">
                         <div><h3>Referrals</h3></div><br>
