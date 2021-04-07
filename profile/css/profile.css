@@ -9,7 +9,9 @@
     color: white;
    
 }
-
+a{
+    color: white!important;
+}
 .x-container {
     float: left;
     width: 100%;
@@ -363,6 +365,7 @@ section:nth-child(2) > div{
 .menu span:hover{
     cursor: pointer;
 }
+
 .referals{
     width: 70%;
     padding-top: 20px;

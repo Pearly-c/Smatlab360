@@ -83,10 +83,11 @@ $errors = array();
                             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                             <div class="overlay-content">
                                 <a href="../index.php" onclick="closeNav()">Home</a>
-                                <a href="contact.html">Entrepreneur</a>
+                                <a href="../profile/profile.php">Profile</a>
+                                <a href="#">Entrepreneur</a>
                                 <a href="deposit.php">Deposit</a>
                                 <a href="withdraw.php">withdrawal</a>
-                                <a href="faq.html">Support</a>
+                                <a href="#">Support</a>
                                 <a href="logout.php">logout</a>
                             </div>
                         </div>
@@ -102,14 +103,15 @@ $errors = array();
             <!--Profile End-->       
            <!---Referals-->
            <section class="bio">
-                <div class="my-row">
+                <div class="my-row" style="height: auto; overflow: hidden;">
                     <div class="menu">
-                        <span>Home</span><br><br>
-                        <span>Entrepreneur</span><br><br>
-                        <span><a href="deposit.php" style="color: white;">Deposit</a></span><br><br>
-                        <span><a href="withdraw.php" style="color: white;">withdrawal</a></span><br><br>
-                        <span>Support</span><br><br>
-                        <span><a href="logout.php" style="color: white;">logout</a></span>
+                        <span><a href="../index.php" style="color: white">Home</a></span><br><br>
+                        <span><a href="../profile/profile.php" style="color: white">Profile</a></span><br><br>
+                        <span><a href="#" style="color: white">Entrepreneur</a></span><br><br>
+                        <span><a href="deposit.php" style="color: white">Deposit</a></span><br><br>
+                        <span><a href="withdraw.php" style="color: white">withdrawal</a></span><br><br>
+                        <span><a href="#" style="color: white">Support</a></span><br><br>
+                        <span><a href="logout.php" style="color: white">logout</a></span>
                     </div>
                     <div class="referals">
                         <div><h3>Deposit</h3></div><br>
