@@ -120,9 +120,9 @@ $errors = array();
                             <div class="main-bd" style="display: block;">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <form>
+                                        <form action="payment.php" method="post">
                                             <div style="text-align: center;">
-                                                <p><input type="number" name="" placeholder="Enter Amount" style="width: 60%; padding: 5px 0px 5px 15px; color: black; outline: none;"></p>
+                                                <p><input type="number" name="amount" placeholder="Enter Amount" style="width: 60%; padding: 5px 0px 5px 15px; color: black; outline: none;"></p>
                                                 <input type="Submit" name="submit" class="btn" style="background-color: #212237; color:white; ">
                                             </div>
                                         </form>
