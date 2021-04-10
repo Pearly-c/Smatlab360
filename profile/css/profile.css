@@ -370,6 +370,17 @@ section:nth-child(2) > div{
     width: 70%;
     padding-top: 20px;
 }
+@media(max-width: 560px){
+    .confirm-text{
+        font-size: 18px!important;
+    }
+    
+}
+@media(max-width: 400px){
+    .confirm-button{
+        margin-bottom: 15px!important;
+    }
+}
 
 /*google fonts*/
 body {

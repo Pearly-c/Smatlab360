@@ -25,7 +25,7 @@ $errors = array();
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <title></title>
+        <title>Deposit</title>
 
         <!--icon -->
         <link rel="icon" href="" type="image/x-icon" />
@@ -134,8 +134,8 @@ $errors = array();
                 </div>
             </section>
             <!---Referals End-->
-</main>
-<!--- Script Source Files -->
+        </main>
+        <!--- Script Source Files -->
         <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
         <script src="js/profile.js"></script>
         <!--- End of Script Source Files -->
