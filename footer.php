@@ -18,11 +18,11 @@
 						</ul>
 					</div>
 					<div class="col-md-3 sign-gd">
-						<h4>Our<span>Services</span> </h4>
+						<h4>Our <span>Services</span> </h4>
 						<ul>
-							<li><a href="index.php">Entrepreneurship</a></li>
-							<li><a href="about.php">Affiliate Marketing</a></li>
-							<li><a href="404.php">Business Dev.</a></li>
+							<li><a href="signup.php">Entrepreneurship</a></li>
+							<li><a href="signup.php">Affiliate Marketing</a></li>
+							<li><a href="signup.php">Business Dev.</a></li>
 						</ul>
 					</div>
 		

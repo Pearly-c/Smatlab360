@@ -33,95 +33,39 @@
 </p>
 						<p>Becoming a professional and successful Entrepreneur is a journey of great commitment, we are here to simplify and reduce the learning curve for you.
 Our approach is quite unconventional, exciting and guarantees ultimate success. The most interesting thing here is that you LEARN and EARN BIG simultaneously. The longer you stay with us, the more inspired you are to become more.</p>
-						<div class="ab_button">
-							<a class="btn btn-primary btn-lg hvr-underline-from-left" href="single.php" role="button">Read More </a>
-						</div>
 					</div>
 					<div class="clearfix"></div>
 				</div>
 			</div>
-			<div class="news-main">
-				<div class="col-md-4 banner_bottom_left">
-					<div class="banner_bottom_pos">
-						<div class="banner_bottom_pos_grid">
-							<div class="col-xs-3 banner_bottom_grid_left">
-								<div class="banner_bottom_grid_left_grid">
-									<span class="fa fa-laptop" aria-hidden="true"></span>
-								</div>
-							</div>
-							<div class="col-xs-9 banner_bottom_grid_right">
-								<h4>Digital Solutions</h4>
-								<p>Lorem Ipsum is simply text the printing and typesetting standard industry.</p>
 
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 banner_bottom_left">
-					<div class="banner_bottom_pos">
-						<div class="banner_bottom_pos_grid">
-							<div class="col-xs-3 banner_bottom_grid_left">
-								<div class="banner_bottom_grid_left_grid">
-									<span class="fa fa-pencil-square-o" aria-hidden="true"></span>
-								</div>
-							</div>
-							<div class="col-xs-9 banner_bottom_grid_right">
-								<h4>Live Website Builder</h4>
-								<p>Lorem Ipsum is simply text the printing and typesetting standard industry.</p>
-
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 banner_bottom_left">
-					<div class="banner_bottom_pos">
-						<div class="banner_bottom_pos_grid">
-							<div class="col-xs-3 banner_bottom_grid_left">
-								<div class="banner_bottom_grid_left_grid">
-									<span class="fa fa-newspaper-o" aria-hidden="true"></span>
-								</div>
-							</div>
-							<div class="col-xs-9 banner_bottom_grid_right">
-								<h4>Creative Strategy</h4>
-								<p>Lorem Ipsum is simply text the printing and typesetting standard industry.</p>
-
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
 		</div>
 	</div>
 	<!--//ab-->
 	<!--/what-->
-	<div class="works">
+	<div class="works" id="works">
 		<div class="container">
-			<h3 class="tittle-w3ls cen">What we do</h3>
+			<h3 class="tittle-w3ls cen">How it Works</h3>
 			<div class="inner_sec_info_wthree_agile">
 				<div class="ser-first">
 					<div class="col-md-3 ser-first-grid text-center">
-						<span class="fa fa-shield" aria-hidden="true"></span>
-						<h3>Unique Design</h3>
-						<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+						<a href="signup.php"><span class="fa fa-shield" aria-hidden="true"></span></a>
+						<a href="signup.php"><h3>Register</h3></a>
+						<p>Register with one time payment of $20 (#6,000)</p>
 					</div>
 					<div class="col-md-3 ser-first-grid text-center">
 						<span class="fa fa-pencil" aria-hidden="true"></span>
-						<h3>Different Layout</h3>
-						<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+						<a href="signin.php"><h3>Refer</h3></a>
+						<p>Refer someone to join the company with your referrer link</p>
 					</div>
 					<div class="col-md-3 ser-first-grid text-center">
 						<span class="fa fa-star" aria-hidden="true"></span>
-						<h3>Portfolio Styles</h3>
-						<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+						<a href="signin.php"><h3>Earn</h3></a>
+						<p>earn $10 (#3,000) on anyone that join the company through your referrer link</p>
 					</div>
 					<div class="col-md-3 ser-first-grid text-center">
 						<span class="fa fa-thumbs-up" aria-hidden="true"></span>
-						<h3>User Experience</h3>
-						<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+						<a href="signin.php"><h3>Withdraw</h3></a>
+						<p>Withdraw minimum of $20 into your bank account within 24 hours</p>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -134,35 +78,7 @@ Our approach is quite unconventional, exciting and guarantees ultimate success. 
 		<!-- //team -->
 	
 	<!--/bottom-->
-	<div class="banner_bottom">
-		<div class="container">
-			<h3 class="tittle-w3ls">Let’s Change How We Manage Business
-			</h3>
-			<div class="inner_sec_info_wthree_agile">
-				<div class="help_full">
 
-					<div class="col-md-6 banner_bottom_left">
-						<h4>Entrepreneurs Get Their Act Together </h4>
-						<p>Pellentesque convallis diam consequat magna vulputate malesuada. Cras a ornare elit. Nulla viverra pharetra sem, eget
-							pulvinar neque pharetra ac. Lorem Ipsum convallis diam consequat magna vulputate malesuada. Cras a ornare elit. Nulla
-							viverra pharetra sem, eget pulvinar neque pharetra ac.
-
-						</p>
-						<div class="ab_button">
-							<a class="btn btn-primary btn-lg hvr-underline-from-left" href="single.php" role="button">Read More </a>
-						</div>
-
-
-					</div>
-
-					<div class="col-md-6 banner_bottom_grid help">
-						<img src="images/banner_mid.jpg" alt=" " class="img-responsive">
-					</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-	</div>
 	<!--//bottom-->
 	<!--/testimonials-->
 	<div class="tesimonials">

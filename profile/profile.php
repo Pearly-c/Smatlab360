@@ -68,6 +68,9 @@ while ($result= $row->fetch_assoc()) {
                                 
                             </div>
                             <div class='address'>
+                            <p><a href='deposit.php'><span class='country' style='color: #2ecc71;'>Referral Code:$result[affcode]</span></a></p>
+                            </div>
+                            <div class='address'>
                             <p><a href='deposit.php'><span class='country' style='color: #2ecc71;'>Make payment to start earning</span></a></p>
                             </div>
                         </div>

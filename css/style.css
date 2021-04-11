@@ -544,13 +544,13 @@ h3.tittle-w3ls {
 }
 
 h3.tittle-w3ls.cen {
-    color: #fff;
+    color: #1d1c1c;
     text-align: center;
 }
 
 .ser-first-grid span {
     font-size: 32px;
-    color: #fff;
+    color: #1d1c1c;
     background: none;
     width: 80px;
     height: 80px;
@@ -574,9 +574,10 @@ h3.tittle-w3ls.cen {
 
 .ser-first-grid p {
     margin: 0;
-    color: #777;
-    font-size: 0.9em;
     line-height: 1.9em;
+    letter-spacing: 1px;
+    font-size: 1em;
+    color: #777;
 }
 
 .ser-first-grid h3 {
@@ -589,7 +590,7 @@ h3.tittle-w3ls.cen {
 
 .works {
     padding: 7em 0;
-    background: #1d1c1c;
+    background: #fff;
 }
 
 /*-- /blog --*/

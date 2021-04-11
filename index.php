@@ -1,7 +1,80 @@
 <!DOCTYPE html>
 <html>
 
-<?php include('header.php'); ?>
+<head>
+	<title>Smatlab</title>
+
+	<!--/tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Conceit Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!--//tags -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+	<link href="css/contact.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<!-- //for bootstrap working -->
+	<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,300,300i,400,400i,500,500i,600,600i,700,800" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700" rel="stylesheet">
+	
+</head>
+
+<body>
+	<div class="top_header" id="home">
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="nav_top_fx_w3ls_agileinfo">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					    aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+					<div class="logo-w3layouts-agileits">
+					<a class="navbar-brand" href="index.php"> <img src="logo2.png"></a>
+					</div>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<div class="nav_right_top">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a class="request" href="signin.php">Login</a></li>
+							<li><a class="request" href="signup.php">Register</a></li>
+
+						</ul>
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="index.php">Home</a></li>
+							<li><a href="about.php">About Us</a></li>
+							<li><a href="#works">How it Works</a></li>
+							<li><a href="contact.php">Contact</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="signup.php">Entrepreneurship</a></li>
+									<li><a href="signup.php">Affiliate</a></li>
+
+
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+		</nav>
+	</div>
 	<!-- banner -->
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 		<!-- Indicators -->
@@ -99,108 +172,33 @@
 	</div>
 	<!--//banner -->
 	<!--/ab-->
-	<div class="banner_bottom">
-		<div class="container">
-			<h3 class="tittle-w3ls">About Us</h3>
-			<div class="inner_sec_info_wthree_agile">
-				<div class="help_full">
-
-					<div class="col-md-6 banner_bottom_grid help">
-						<img src="images/abs.png" alt=" " class="img-responsive">
-					</div>
-					<div class="col-md-6 banner_bottom_left">
-						<h4>Working together to build a better future</h4>
-						<p>Your life is about to change because you have chosen this path of life. Now as an entrepreneur, time means a whole lot to you. As a matter of fact, it’s your most vital currency; unfortunately though, you don’t and will never have so much of it.</p>
-						<p>You deciding to be an entrepreneur, you have decided to walk a path in life that many people are so scared of taking. </p>
-						<div class="ab_button">
-							<a class="btn btn-primary btn-lg hvr-underline-from-left" href="about.php" role="button">Read More </a>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-			<div class="news-main">
-				<div class="col-md-4 banner_bottom_left">
-					<div class="banner_bottom_pos">
-						<div class="banner_bottom_pos_grid">
-							<div class="col-xs-3 banner_bottom_grid_left">
-								<div class="banner_bottom_grid_left_grid">
-									<span class="fa fa-laptop" aria-hidden="true"></span>
-								</div>
-							</div>
-							<div class="col-xs-9 banner_bottom_grid_right">
-								<h4>Capacity Building </h4>
-								<p>Lorem Ipsum is simply text the printing and typesetting standard industry.</p>
-
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 banner_bottom_left">
-					<div class="banner_bottom_pos">
-						<div class="banner_bottom_pos_grid">
-							<div class="col-xs-3 banner_bottom_grid_left">
-								<div class="banner_bottom_grid_left_grid">
-									<span class="fa fa-pencil-square-o" aria-hidden="true"></span>
-								</div>
-							</div>
-							<div class="col-xs-9 banner_bottom_grid_right">
-								<h4>Innovative Services</h4>
-								<p>Lorem Ipsum is simply text the printing and typesetting standard industry.</p>
-
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 banner_bottom_left">
-					<div class="banner_bottom_pos">
-						<div class="banner_bottom_pos_grid">
-							<div class="col-xs-3 banner_bottom_grid_left">
-								<div class="banner_bottom_grid_left_grid">
-									<span class="fa fa-newspaper-o" aria-hidden="true"></span>
-								</div>
-							</div>
-							<div class="col-xs-9 banner_bottom_grid_right">
-								<h4>Creative Strategy</h4>
-								<p>Lorem Ipsum is simply text the printing and typesetting standard industry.</p>
-
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-	</div>
+	
 	<!--//ab-->
 	<!--/what-->
-	<div class="works">
+	<div class="works" id="works">
 		<div class="container">
-			<h3 class="tittle-w3ls cen">What we do</h3>
+			<h3 class="tittle-w3ls cen">How it Works</h3>
 			<div class="inner_sec_info_wthree_agile">
 				<div class="ser-first">
 					<div class="col-md-3 ser-first-grid text-center">
-						<span class="fa fa-shield" aria-hidden="true"></span>
-						<h3>Register</h3>
-						<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+						<a href="signup.php"><span class="fa fa-shield" aria-hidden="true"></span></a>
+						<a href="signup.php"><h3>Register</h3></a>
+						<p>Register with one time payment of $20 (#6,000)</p>
 					</div>
 					<div class="col-md-3 ser-first-grid text-center">
 						<span class="fa fa-pencil" aria-hidden="true"></span>
-						<h3>Refer</h3>
-						<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+						<a href="signin.php"><h3>Refer</h3></a>
+						<p>Refer someone to join the company with your referrer link</p>
 					</div>
 					<div class="col-md-3 ser-first-grid text-center">
 						<span class="fa fa-star" aria-hidden="true"></span>
-						<h3>Earn</h3>
-						<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+						<a href="signin.php"><h3>Earn</h3></a>
+						<p>earn $10 (#3,000) on anyone that join the company through your referrer link</p>
 					</div>
 					<div class="col-md-3 ser-first-grid text-center">
 						<span class="fa fa-thumbs-up" aria-hidden="true"></span>
-						<h3>Withdrawal</h3>
-						<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+						<a href="signin.php"><h3>Withdraw</h3></a>
+						<p>Withdraw minimum of $20 into your bank account within 24 hours</p>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -216,78 +214,7 @@
 
 	<!--//projects-->
 	<!--/blog-->
-	<div class="blog_sec">
-		<h3 class="tittle-w3ls">Entrepreneurship Articles</h3>
-		<div class="col-md-6 banner-btm-left">
-			<div class="banner-btm-top">
-				<div class="banner-btm-inner a1">
-					<div class="blog_date">
-
-						<h4>Jan.05.2018</h4>
-
-					</div>
-					<h6><a href="single.php">Strategic Planning</a></h6>
-					<p class="paragraph">Aenean orci erat, placerat id pulvinar nec, tincidunt vel eros.</p>
-					<div class="clearfix"></div>
-					<a href="single.php" class="blog-btn">Know More</a>
-				</div>
-				<div class="banner-btm-inner a2">
-
-				</div>
-			</div>
-			<div class="banner-btm-bottom">
-				<div class="banner-btm-inner a3">
-
-				</div>
-				<div class="banner-btm-inner a4">
-					<div class="blog_date">
-
-						<h4>Jan.08.2018</h4>
-
-					</div>
-					<h6><a href="single.php">Strategic Planning</a></h6>
-					<p class="paragraph">Aenean orci erat, placerat id pulvinar nec, tincidunt vel eros.</p>
-					<div class="clearfix"></div>
-					<a href="single.php" class="blog-btn">Know More</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-6 banner-btm-left">
-			<div class="banner-btm-top">
-				<div class="banner-btm-inner a1">
-					<div class="blog_date">
-
-						<h4>Jan.25.2018</h4>
-
-					</div>
-					<h6><a href="single.php">Strategic Planning</a></h6>
-					<p class="paragraph">Aenean orci erat, placerat id pulvinar nec, tincidunt vel eros.</p>
-					<div class="clearfix"></div>
-					<a href="single.php" class="blog-btn">Know More</a>
-				</div>
-				<div class="banner-btm-inner a5">
-
-				</div>
-			</div>
-			<div class="banner-btm-bottom">
-				<div class="banner-btm-inner a6">
-
-				</div>
-				<div class="banner-btm-inner a4">
-					<div class="blog_date">
-
-						<h4>Jan.05.2018</h4>
-
-					</div>
-					<h6><a href="single.php">Strategic Planning</a></h6>
-					<p class="paragraph">Aenean orci erat, placerat id pulvinar nec, tincidunt vel eros.</p>
-					<div class="clearfix"></div>
-					<a href="single.php" class="blog-btn">Know More</a>
-				</div>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-	</div>
+	
 
 	<!--//blog-->
 	
