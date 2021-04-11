@@ -136,7 +136,7 @@ $email = $res['email'];
                         <span><a href="../index.php" style="color: white">Home</a></span><br><br>
                         <span><a href="../profile/profile.php" style="color: white">Profile</a></span><br><br>
                         <span><a href="#" style="color: white">Entrepreneur</a></span><br><br>
-                        <span><a href="deposit.php" style="color: white">Deposit</a></span><br><br>
+                        <span><a href="deposit.php" style="color: white">Subscription</a></span><br><br>
                         <span><a href="withdraw.php" style="color: white">withdrawal</a></span><br><br>
                         <span><a href="#" style="color: white">Support</a></span><br><br>
                         <span><a href="logout.php" style="color: white">logout</a></span>
@@ -170,7 +170,7 @@ $email = $res['email'];
  
 <script>
   function payWithPaystack(){
-  	const api = "pk_test_14d74c5a63be284be24299124f8cf2798e2dad70";
+  	const api = "pk_test_21a3c4624e09d0363ac543ae0643d16fc1c3255c";
     var handler = PaystackPop.setup({
       key: api,
       email: '<?php echo $email; ?>',

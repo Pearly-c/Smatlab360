@@ -31,7 +31,7 @@
 							<input type="email" name="email" placeholder="Email" required="">
 							<input type="text" name="username" placeholder="Username" required="">
 							<input type="text" name="phone" placeholder="Phone Number" required="">
-							<input type="file" name="image" required="">
+							
 							<input type="text" name="referal" placeholder="Referal Code (Optional)" >
 							<input type="password" name="password1" id="password1" placeholder="Password" required="">
 							<input type="password" name="password2" id="password2" placeholder="Confirm Password" required="">

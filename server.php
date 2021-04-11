@@ -16,7 +16,6 @@ include('db.php');
       $username = mysqli_real_escape_string($conn, $_POST['username']);
       $ref_by = mysqli_real_escape_string($conn, $_POST["referal"]);
       $password_1 = mysqli_real_escape_string($conn, $_POST['password1']);
-      $image = $_FILES['image']['name'];
       $password_2 = mysqli_real_escape_string($conn, $_POST['password2']);
       $refcode = rand(100000,999999);//referal code generator
       $balance = "0.00";
@@ -32,20 +31,17 @@ include('db.php');
       if (empty($username)) { array_push($errors, "Username is required"); }
       if (empty($password_1)) { array_push($errors, "State Number is required"); }
       if (empty($password_2)) { array_push($errors, "Job Code is required"); }
-      if (empty($image)) { array_push($errors, "File is required"); }
 
        if ($password_1 != $password_2) {
          array_push($errors, "The two passwords do not match");
       }
-         // image file directory
-      $target = "profile/images/".basename($image);
+
       // register user if there are no errors in the form
-      if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
          if (count($errors) == 0) {
          $password = md5($password_1);//encrypt the password before saving in the database
-         $stmt = $conn->prepare("INSERT INTO users (firstname, lastname, email, username, passwords, level, affcode, refBy, balance, picimage) 
-                 VALUES(?,?,?,?,?,?,?,?,?,?)");
-         $stmt->bind_param("ssssssssss", $firstname, $lastname, $email, $username, $password, $level, $refcode, $ref_by, $balance, $image);
+         $stmt = $conn->prepare("INSERT INTO users (firstname, lastname, email, username, passwords, level, affcode, refBy, balance) 
+                 VALUES(?,?,?,?,?,?,?,?,?)");
+         $stmt->bind_param("sssssssss", $firstname, $lastname, $email, $username, $password, $level, $refcode, $ref_by, $balance);
          $stmt->execute();
          $_SESSION['username'] = $username;
          header('location:success.php');
@@ -55,7 +51,7 @@ include('db.php');
       }
 
 }
-}
+
 
 
 // LOGIN USER

@@ -65,6 +65,10 @@ while ($result= $row->fetch_assoc()) {
                                 <span class='country' style='color: #2ecc71;'>
                                     $result[level]
                                 </span>
+                                
+                            </div>
+                            <div class='address'>
+                            <p><a href='deposit.php'><span class='country' style='color: #2ecc71;'>Make payment to start earning</span></a></p>
                             </div>
                         </div>
 
@@ -110,8 +114,8 @@ while ($result= $row->fetch_assoc()) {
                         <span><a href="../index.php" style="color: white">Home</a></span><br><br>
                         <span><a href="../profile/profile.php" style="color: white">Profile</a></span><br><br>
                         <span><a href="" style="color: white">Entrepreneur</a></span><br><br>
-                        <span><a href="deposit.php" style="color: white;">Deposit</a></span><br><br>
-                        <span><a href="withdraw.php" style="color: white;">withdrawal</a></span><br><br>
+                        <span><a href="deposit.php" style="color: white;">Subscription</a></span><br><br>
+                        <span><a href="withdraw.php" style="color: white;">Withdraw</a></span><br><br>
                         <span><a href="" style="color: white">Support</a></span><br><br>
                         <span><a href="logout.php" style="color: white;">logout</a></span><br><br>
                     </div>

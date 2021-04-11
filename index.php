@@ -19,10 +19,7 @@
 						<p></p>
 						<div class="top-buttons">
 							<div class="bnr-button">
-								<a class="act" href="single.php">Read More</a>
-							</div>
-							<div class="bnr-button">
-								<a href="portfolio.php" class="two scroll ">Portfolio</a>
+								<a class="act" href="signup.php">Get Started</a>
 							</div>
 							<div class="clearfix"> </div>
 						</div>
@@ -36,10 +33,7 @@
 						<p></p>
 						<div class="top-buttons">
 							<div class="bnr-button">
-								<a class="act" href="single.php">Read More</a>
-							</div>
-							<div class="bnr-button">
-								<a href="portfolio.php" class="two scroll ">Portfolio</a>
+								<a class="act" href="signup.php">Get Started</a>
 							</div>
 							<div class="clearfix"> </div>
 						</div>
@@ -53,10 +47,7 @@
 						<p></p>
 						<div class="top-buttons">
 							<div class="bnr-button">
-								<a class="act" href="single.php">Read More</a>
-							</div>
-							<div class="bnr-button">
-								<a href="portfolio.php" class="two scroll ">Portfolio</a>
+								<a class="act" href="signup.php">Get Started</a>
 							</div>
 							<div class="clearfix"> </div>
 						</div>
@@ -71,10 +62,7 @@
 						<p></p>
 						<div class="top-buttons">
 							<div class="bnr-button">
-								<a class="act" href="single.php">Read More</a>
-							</div>
-							<div class="bnr-button">
-								<a href="portfolio.php" class="two scroll ">Portfolio</a>
+								<a class="act" href="signup.php">Get Started</a>
 							</div>
 							<div class="clearfix"> </div>
 						</div>
@@ -89,11 +77,9 @@
 						<h3>Great Income </h3>
 						<p></p>
 						<div class="top-buttons">
+							<div class="top-buttons">
 							<div class="bnr-button">
-								<a class="act" href="single.php">Read More</a>
-							</div>
-							<div class="bnr-button">
-								<a href="#portfolio" class="two scroll ">Portfolio</a>
+								<a class="act" href="signup.php">Get Started</a>
 							</div>
 							<div class="clearfix"> </div>
 						</div>

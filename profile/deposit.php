@@ -108,13 +108,13 @@ $errors = array();
                         <span><a href="../index.php" style="color: white">Home</a></span><br><br>
                         <span><a href="../profile/profile.php" style="color: white">Profile</a></span><br><br>
                         <span><a href="#" style="color: white">Entrepreneur</a></span><br><br>
-                        <span><a href="deposit.php" style="color: white">Deposit</a></span><br><br>
-                        <span><a href="withdraw.php" style="color: white">withdrawal</a></span><br><br>
+                        <span><a href="deposit.php" style="color: white">Subscription</a></span><br><br>
+                        <span><a href="withdraw.php" style="color: white">Withdraw</a></span><br><br>
                         <span><a href="#" style="color: white">Support</a></span><br><br>
                         <span><a href="logout.php" style="color: white">logout</a></span>
                     </div>
                     <div class="referals">
-                        <div><h3>Deposit</h3></div><br>
+                        <div><h3>Subscription</h3></div><br>
                      
                         <div>
                             <div class="main-bd" style="display: block;">
@@ -122,7 +122,7 @@ $errors = array();
                                     <div class="col-md-12">
                                         <form action="payment.php" method="post">
                                             <div style="text-align: center;">
-                                                <p><input type="number" name="amount" placeholder="Enter Amount" style="width: 60%; padding: 5px 0px 5px 15px; color: black; outline: none;"></p>
+                                                <p><select name="amount" placeholder="Enter Amount" style="width: 60%; padding: 5px 0px 5px 15px; color: black; outline: none;"><option value="6000">6,000</option> </select></p>
                                                 <input type="Submit" name="submit" class="btn" style="background-color: #212237; color:white; ">
                                             </div>
                                         </form>
