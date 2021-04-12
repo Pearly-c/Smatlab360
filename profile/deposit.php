@@ -106,7 +106,7 @@ $errors = array();
                 <div class="my-row" style="height: auto; overflow: hidden;">
                     <div class="menu">
                         <span><a href="../index.php" style="color: white">Home</a></span><br><br>
-                        <span><a href="../profile/profile.php" style="color: white">Profile</a></span><br><br>
+                        <span><a href="../profile/index.php" style="color: white">Profile</a></span><br><br>
                         <span><a href="#" style="color: white">Entrepreneur</a></span><br><br>
                         <span><a href="deposit.php" style="color: white">Subscription</a></span><br><br>
                         <span><a href="withdraw.php" style="color: white">Withdraw</a></span><br><br>

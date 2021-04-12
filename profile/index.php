@@ -78,36 +78,38 @@ while ($result= $row->fetch_assoc()) {
                         <div class='account'>
                             <h3>Balance</h3>
                             <span>$result[balance]</span>
-                        </div>";
-                    }
+                        </div>
 
-                ?>
                         
-                        <div id="hamburger" onclick="openNav()">
+                        <div id='hamburger' onclick='openNav()'>
                             <div></div>
                             <div></div>
                             <div></div>
                         </div>
-                        <div id="myNav" class="overlay">
-                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                            <div class="overlay-content">
-                                <a href="../index.php" onclick="closeNav()">Home</a>
-                                <a href="../profile/profile.php">Profile</a>
-                                <a href="contact.html">Entrepreneur</a>
-                                <span><a href="deposit.php">Deposit</a></span><br><br>
-                                <span><a href="withdraw.php">withdrawal</a></span><br><br>
-                                <a href="faq.html">Support</a>
-                                <a href="logout.php">logout</a>
+                        <div id='myNav' class='overlay'>
+                            <a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>&times;</a>
+                            <div class='overlay-content'>
+                                <a href='../index.php' onclick='closeNav()'>Home</a>
+                                <a href='../profile/profile.php'>Profile</a>
+                                <a href='contact.html'>Entrepreneur</a>
+                                <span><a href='deposit.php'>Deposit</a></span><br><br>
+                                <span><a href='withdraw.php'>withdrawal</a></span><br><br>
+                                <a href='faq.html'>Support</a>
+                                <a href='logout.php'>logout</a>
                             </div>
                         </div>
+              
                     </div>
                 </div>
            </section>  
-           <section class="hide-account">
+           <section class='hide-account'>
                 <div>
                     <h3>Balance</h3>
-                    <span>40,000</span>
-                </div>
+                    <span><?php echo $result[balance];</span>
+                </div>";
+                  }
+
+                ?>
            </section>
             <!--Profile End-->       
            <!---Referals-->

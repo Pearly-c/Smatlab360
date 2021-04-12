@@ -7,8 +7,8 @@
 	<!--/tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="Conceit Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<meta name="description" content="Smatlab360 is a human capacity and entrepreneurship development programme with aim of improving the skills and knowledge of entrepreneurs through our various training and innovative products and services and also be able to make a lot of money during the process of learning.">
+	<meta name="keywords" content="Affiliate, How to earn money, Smatlab360, Smatlab" />
 	<script type="application/x-javascript">
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -219,78 +219,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--//blog-->
 	
 	<!--/testimonials-->
-	<div class="tesimonials">
-		<div class="container">
-			<h3 class="tittle-w3ls cen">Testimonials</h3>
-			<div class="inner_sec">
-				<div class="test_grid_sec">
-					<div class="col-md-offset-2 col-md-8">
-						<div class="carousel slide two" data-ride="carousel" id="quote-carousel">
-							<!-- Bottom Carousel Indicators -->
-			<ol class="carousel-indicators two">
-				<li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
-				<li data-target="#quote-carousel" data-slide-to="1"></li>
-				<li data-target="#quote-carousel" data-slide-to="2"></li>
-				<li data-target="#quote-carousel" data-slide-to="3"></li>
-			</ol>
-
-							<!-- Carousel Slides / Quotes -->
-							<div class="carousel-inner">
-
-								<!-- Quote 1 -->
-								<div class="item active">
-									<blockquote>
-										<div class="test_grid">
-											<div class="col-sm-3 text-center test_img">
-												<img src="images/t1.jpg" class="img-responsive" alt="">
-
-											</div>
-											<div class="col-sm-9 test_img_info">
-												<p>Maecenas quis neque libero. Class aptent taciti.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-													auctor nec lacus ut tempor. Mauris.</p>
-												<h6>Sara Lisbon</h6>
-											</div>
-										</div>
-									</blockquote>
-								</div>
-								<!-- Quote 2 -->
-								<div class="item">
-									<blockquote>
-										<div class="test_grid">
-											<div class="col-sm-3 text-center test_img">
-												<img src="images/t2.jpg" class="img-responsive" alt="">
-											</div>
-											<div class="col-sm-9 test_img_info">
-												<p>Lorem ipsum dolor sit amet. Class aptent taciti.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-													auctor nec lacus ut tempor. Mauris.</p>
-												<h6>Jane Wearne</h6>
-											</div>
-										</div>
-									</blockquote>
-								</div>
-								<!-- Quote 3 -->
-								<div class="item">
-									<blockquote>
-										<div class="test_grid">
-											<div class="col-sm-3 text-center test_img">
-												<img src="images/t3.jpg" class="img-responsive" alt="">
-											</div>
-											<div class="col-sm-9 test_img_info">
-												<p>Maecenas quis neque libero. Class aptent taciti.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-													auctor nec lacus ut tempor. Mauris.</p>
-												<h6>Alice Williams</h6>
-											</div>
-										</div>
-									</blockquote>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<?php include('testimonial.php'); ?>
 	<!--//testimonials-->
 
 	<!-- /newsletter-->
