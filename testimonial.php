@@ -1,6 +1,6 @@
 <div class="tesimonials">
 		<div class="container">
-			<h3 class="tittle-w3ls cen">Testimonials</h3>
+			<h3 class="tittle-w3ls cen"><span style="color: white;">Testimonials</span></h3>
 			<div class="inner_sec">
 				<div class="test_grid_sec">
 					<div class="col-md-offset-2 col-md-8">

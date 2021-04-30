@@ -75,7 +75,7 @@ include('db.php');
          if (mysqli_num_rows($row) == 1) {
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "Welcome, " . $_SESSION['username'];
-            header('location: profile/profile.php');
+            header('location: profile/index.php');
          }else {
             array_push($errors, "Wrong username/password combination");
          }

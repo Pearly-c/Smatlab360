@@ -50,7 +50,10 @@ $stmt =$conn->prepare("SELECT * FROM users WHERE username=?");
 $stmt->bind_param("s", $uploaduser);
 $stmt->execute();
 $row = $stmt->get_result();
-while ($result= $row->fetch_assoc()) {
+$result= $row->fetch_assoc();
+$referals = ($result['balance'] == 6000 && $result['balance'] == 0) ? '$result[balance]':'Make payment to start earning';                       
+
+if($result >= 0) {
     echo "<div class='x-container'>
                     <div class='profile-header'>
                         <div class='profile-img'>
@@ -59,7 +62,7 @@ while ($result= $row->fetch_assoc()) {
                         <div class='profile-nav-info'>
                             <h3 class='user-name'>  $result[firstname] $result[lastname]</h3>
                             <div class='address'>
-                                <p class='state' style='color: #212237;'>
+                                <p class='state' sgtyle='color: #212237;'>
                                     Level: 
                                 </p>
                                 <span class='country' style='color: #2ecc71;'>
@@ -67,17 +70,19 @@ while ($result= $row->fetch_assoc()) {
                                 </span>
                                 
                             </div>
+                            
                             <div class='address'>
-                            <p><a href='deposit.php'><span class='country' style='color: #2ecc71;'>Referral Code:$result[affcode]</span></a></p>
+                            <p><a href='deposit.php'><span class='country' style='color: #2ecc71;'>$referals</span></a></p>
                             </div>
-                            <div class='address'>
-                            <p><a href='deposit.php'><span class='country' style='color: #2ecc71;'>Make payment to start earning</span></a></p>
-                            </div>
+
+
+                                                        
+                        
                         </div>
 
                         <div class='account'>
                             <h3>Balance</h3>
-                            <span>$result[balance]</span>
+                            <span>$0.0<?php echo $result[balance]; ?></span>
                         </div>
 
                         
@@ -105,7 +110,7 @@ while ($result= $row->fetch_assoc()) {
            <section class='hide-account'>
                 <div>
                     <h3>Balance</h3>
-                    <span><?php echo $result[balance];</span>
+                    <span>$0.0<?php echo $result[balance]; ?></span>
                 </div>";
                   }
 
@@ -137,7 +142,7 @@ while ($result= $row->fetch_assoc()) {
                                                 <div class="content">
                                                     <table class="table">
                                                 <tbody>
-                         <?php
+<?php
 include('../db.php');
 $uploaduser = $_SESSION['username'];
 $query = "SELECT * FROM users WHERE username='$uploaduser'";
@@ -156,9 +161,9 @@ $stmt =$conn->prepare("SELECT * FROM users WHERE refBy=?");
 $stmt->bind_param("s", $ref);
 $stmt->execute();
 $result = $stmt->get_result();
+
 while ($row = $result->fetch_assoc()) { ?>       
                         <tr>
-                            <th scope="row">1</th>
                             <td><?php echo $row["firstname"]; ?></td>
                             <td><?php echo $row["lastname"]; ?></td>
                         </tr>
@@ -180,34 +185,11 @@ while ($row = $result->fetch_assoc()) { ?>
                 <tbody>
                     <tr>
                     <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td><a href="" class="btn btn-primary">Edit</a></td>
-                    <td><a href="" class="btn btn-danger">Delete</a></td>
+                    <td>....</td>
+                    <td><a href="" class="btn btn-primary">....</a></td>
+                    <td><a href="" class="btn btn-danger">....</a></td>
                     </tr>
-                    <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td><a href="" class="btn btn-primary">Edit</a></td>
-                    <td><a href="" class="btn btn-danger">Delete</a></td>
-                    </tr>
-                    <tr>
-                    <th scope="row">3</th>
-                    <td>Jacob</td>
-                    <td><a href="" class="btn btn-primary">Edit</a></td>
-                    <td><a href="" class="btn btn-danger">Delete</a></td>
-                    </tr>
-                    <tr>
-                    <th scope="row">4</th>
-                    <td>Jacob</td>
-                    <td><a href="" class="btn btn-primary">Edit</a></td>
-                    <td><a href="" class="btn btn-danger">Delete</a></td>
-                    </tr>
-                    <tr>
-                    <th scope="row">4</th>
-                    <td>Jacob</td>
-                    <td><a href="" class="btn btn-primary">Edit</a></td>
-                    <td><a href="" class="btn btn-danger">Delete</a></td>
-                    </tr>
+                    
                 </tbody>
             </table>   
         </div>     
