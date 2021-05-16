@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+<?php include('db.php');
+include('errors.php'); ?>
 
 <?php include('header.php'); ?>
 	<!--/banner_info-->
@@ -20,7 +22,7 @@
 		<div class="container">
 			<div class="tittle-w3ls_head">
 				<h3 class="tittle-w3ls three">SignIn to <span>your Account </span></h3><br>
-				<?php include('errors.php'); ?>
+				<?php include('profile/errors.php'); ?>
 			</div>
 			<div class="inner_sec_info_wthree_agile">
 				<div class="signin-form">

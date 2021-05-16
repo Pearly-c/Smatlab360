@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+<?php include('db.php');
+include('errors.php'); ?>
 
 <?php include('header.php'); ?>
 	<!--/banner_info-->
@@ -25,6 +27,7 @@
 			<div class="inner_sec_info_wthree_agile">
 				<div class="signin-form">
 					<div class="login-form-rec">
+						<?php include('profile/errors.php'); ?>
 						<form action="server.php" method="POST" enctype="multipart/form-data">
 							<input type="text" name="fname" placeholder="First Name" required="">
 							<input type="text" name="lname" placeholder="Last Name" required="">

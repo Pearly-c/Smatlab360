@@ -7,6 +7,7 @@
   $errors = array(); 
   $_SESSION['success'] = "";
 include('db.php');
+include('errors.php');
 
       if (isset($_POST['submit'])) {
      $firstname = mysqli_real_escape_string($conn, $_POST['fname']);
@@ -34,6 +35,13 @@ include('db.php');
 
        if ($password_1 != $password_2) {
          array_push($errors, "The two passwords do not match");
+      }
+       $stmt = $conn->prepare("SELECT * FROM users WHERE username=?");
+      $stmt->bind_param("s", $username);
+      $stmt->execute();
+      $result = $stmt->get_result();
+      if (mysqli_num_rows($result) == 1) {
+        array_push($errors, "Username already exist");
       }
 
       // register user if there are no errors in the form
@@ -66,6 +74,7 @@ include('db.php');
       array_push($errors, "Password is required");
     }
 
+
     if (count($errors) == 0) {
       $password = md5($password);
       $stmt = $conn->prepare("SELECT * FROM users WHERE username=? AND passwords=?");
@@ -77,6 +86,8 @@ include('db.php');
             $_SESSION['success'] = "Welcome, " . $_SESSION['username'];
             header('location: profile/index.php');
          }else {
+          header('location: signin.php');
+
             array_push($errors, "Wrong username/password combination");
          }
       }

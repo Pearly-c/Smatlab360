@@ -1,11 +1,15 @@
+<?php
+include('errors.php');
+
+?>
 <head>
 	<title>Smatlab</title>
 
 	<!--/tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="Conceit Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<meta name="description" content="Smatlab360 is a human capacity and entrepreneurship development programme with aim of improving the skills and knowledge of entrepreneurs through our various training and innovative products and services and also be able to make a lot of money during the process of learning.">
+	<meta name="keywords" content="Smatlab, Smatlab360, Smatlab Affiliate, Smatlab360 Affiliate, Affiliate" />
 	<script type="application/x-javascript">
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);

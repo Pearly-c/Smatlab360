@@ -33,7 +33,7 @@
                 </div>
                 <div class="modal-footer">
                     
-                    <a href="profile/profile.php"> <button type="button" class="btn btn-primary">Go to Account</button></a>
+                    <a href="profile/index.php"> <button type="button" class="btn btn-primary">Go to Account</button></a>
                 </div>
             </div>
         </div>
