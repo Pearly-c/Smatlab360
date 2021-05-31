@@ -1,7 +1,10 @@
 <?php
+session_start(); 
 include('errors.php');
 
 ?>
+<!DOCTYPE html>
+<html>
 <head>
 	<title>Smatlab</title>
 
@@ -28,6 +31,7 @@ include('errors.php');
 	<!-- //for bootstrap working -->
 	<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,300,300i,400,400i,500,500i,600,600i,700,800" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700" rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.png">
 	
 </head>
 
@@ -50,11 +54,29 @@ include('errors.php');
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<div class="nav_right_top">
-						<ul class="nav navbar-nav navbar-right">
+
+<?php  if(isset($_SESSION['username']))  { ?>
+<ul class="nav navbar-nav navbar-right">
+            
+          <li><a class="request" href="profile/index.php"><?php echo $_SESSION['username']; ?> </a></li>
+                                   
+            <li><a class="request" href="profile/logout.php">Logout</a></li>
+             </div>
+
+
+<?php }else { ?>
+
+     <ul class="nav navbar-nav navbar-right">
 							<li><a class="request" href="signin.php">Login</a></li>
 							<li><a class="request" href="signup.php">Register</a></li>
 
 						</ul>
+<?php
+
+}
+
+?>
+						
 						<ul class="nav navbar-nav">
 							<li class="active"><a href="index.php">Home</a></li>
 							<li><a href="about.php">About Us</a></li>

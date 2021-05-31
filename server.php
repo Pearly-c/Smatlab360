@@ -19,7 +19,7 @@ include('errors.php');
       $password_1 = mysqli_real_escape_string($conn, $_POST['password1']);
       $password_2 = mysqli_real_escape_string($conn, $_POST['password2']);
       $refcode = rand(100000,999999);//referal code generator
-      $balance = "0.00";
+      $balance = "0";
       $level = "Starter";   
       
 
@@ -55,7 +55,7 @@ include('errors.php');
          header('location:success.php');
 
    }else{
-      header('location: signup.php');
+      header('location: failure.php');
       }
 
 }
@@ -86,9 +86,7 @@ include('errors.php');
             $_SESSION['success'] = "Welcome, " . $_SESSION['username'];
             header('location: profile/index.php');
          }else {
-          header('location: signin.php');
-
-            array_push($errors, "Wrong username/password combination");
+          header('location: incorrect_username.php');
          }
       }
    }
