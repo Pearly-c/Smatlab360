@@ -1,7 +1,7 @@
 <?php include('profileheader.php'); ?>
             <!--Profile End-->       
            <!---Referals-->
-           <section class="bio">
+           <section class="bio ">
                 <div class="my-row" style="height: auto; overflow: hidden;">
                     <?php include('head.php'); ?>
                     <div class="referals">
@@ -26,7 +26,7 @@
                                 id="ex3-tab-2"
                                 data-mdb-toggle="tab"
                                 href="#ex3-tabs-2"
-                                role="tab"
+                                 role="tab"
                                 aria-controls="ex3-tabs-2"
                                 aria-selected="false"
                                 >Bank details</a
