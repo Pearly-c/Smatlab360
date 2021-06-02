@@ -431,6 +431,7 @@ h1, h2, h3, h4, h5, h6, p, span {
     border-color: #1266f1!important;
     background: none!important;
 }
+
 .personal-info label{
     color: white!important;
 }
@@ -439,4 +440,25 @@ h1, h2, h3, h4, h5, h6, p, span {
 }
 .tab-content {
     margin-top: 50px;
+    padding-left: 70px;
+    padding-right: 70px;
 }
+@media(max-width: 1200px){
+    .tab-content {
+        padding-left: 130px;
+        padding-right: 130px;
+    }
+}
+@media(max-width: 1000px){
+    .tab-content {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+@media(max-width: 500px){
+    .tab-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
