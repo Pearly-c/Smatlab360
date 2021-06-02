@@ -97,8 +97,8 @@ if($result >= 0) {
                                 <a href='../index.php' onclick='closeNav()'>Home</a>
                                 <a href='index.php'>Profile</a>
                                 <a href='#'>Entrepreneur</a>
-                                <span><a href='deposit.php'>Payment</a></span><br><br>
-                                <span><a href='withdraw.php'>withdrawal</a></span><br><br>
+                                <a href='deposit.php'>Payment</a>
+                                <a href='withdraw.php'>withdrawal</a>
                                 <a href='../contact.php'>Support</a>
                                 <a href='logout.php'>logout</a>
                             </div>
