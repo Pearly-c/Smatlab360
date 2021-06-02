@@ -421,3 +421,22 @@ body {
 h1, h2, h3, h4, h5, h6, p, span {
     font-weight: 500;
 }
+
+/* profile tab */
+
+.nav-link.active{
+    background: none!important;
+}
+.nav-link:hover{
+    border-color: #1266f1!important;
+    background: none!important;
+}
+.personal-info label{
+    color: white!important;
+}
+.personal-info input{
+    color: white!important;
+}
+.tab-content {
+    margin-top: 50px;
+}
