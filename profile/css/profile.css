@@ -150,8 +150,6 @@ body{
 }
 .main-bd{
     width: 100%;
-    display: flex;
-
 }
 .referals > div:first-child{
     text-align: center!important;
@@ -169,7 +167,7 @@ body{
         right: 40px;
     }
 }
-@media(max-width: 900px){
+@media(max-width: 1200px){
     
     body{
         margin: 0 50px;
@@ -233,12 +231,21 @@ body{
         left: 60px;
     }
 }
+@media screen and (max-width: 600px){
+    body{
+        margin: 0 15px;
+    }
+    .referals{
+        padding: 0 20px;
+    }
+}
 @media screen and (max-width: 540px){
     #hamburger{
         left: 30px;
         top: 30px;
     }
 }
+
 @media screen and (max-width: 440px){
     #hamburger{
         left: 15px;
@@ -266,6 +273,12 @@ body{
         left: 8px;
         top: 10px;
     }
+    body{
+        margin: 0 5px;
+    }
+    .referals{
+        padding: 0 10px;
+    }
 
 }
 @media screen and (max-height: 450px) {
@@ -278,6 +291,15 @@ body{
         right: 35px;
     }
     
+}
+@media(max-width: 260px){
+    body{
+        margin: 0;
+    }
+    .referals{
+        padding: 0 5px;
+    }
+
 }
 
 
@@ -305,6 +327,7 @@ section:nth-child(2) > div{
     cursor: pointer;
     padding-top: 30px;
     padding-bottom: 30px;
+    padding-left: 30px;
 }
 .accordion .content-box .label::before{
     content: '+';
@@ -351,7 +374,8 @@ section:nth-child(2) > div{
 .my-row{
     background: #42446d;
     height: 300px;
-    border-radius: 5px;  
+    border-radius: 5px; 
+    padding-bottom: 40px; 
 }
 .my-row > div{
     float: left;
@@ -367,8 +391,15 @@ section:nth-child(2) > div{
 }
 
 .referals{
-    width: 70%;
     padding-top: 20px;
+    width: 70%;
+}
+.referals .table td{
+    color: black!important;
+    font-weight: bold;
+}
+.referals > div:nth-child(2){
+    width: 100%;
 }
 @media(max-width: 560px){
     .confirm-text{
