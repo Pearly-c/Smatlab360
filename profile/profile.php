@@ -5,7 +5,7 @@
                 <div class="my-row" style="height: auto; overflow: hidden;">
                     <?php include('head.php'); ?>
                     <div class="referals">
-                   
+                        <div><h3>PROFILE</h3></div><br>
                         <!-- Tabs navs -->
                         <ul class="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
                             <li class="nav-item" role="presentation">
