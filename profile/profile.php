@@ -17,7 +17,7 @@
                                 role="tab"
                                 aria-controls="ex3-tabs-1"
                                 aria-selected="true"
-                                >Profile</a
+                                >Personal information</a
                                 >
                             </li>
                             <li class="nav-item" role="presentation">
@@ -29,19 +29,7 @@
                                 role="tab"
                                 aria-controls="ex3-tabs-2"
                                 aria-selected="false"
-                                >Personal information</a
-                                >
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <a
-                                class="nav-link"
-                                id="ex3-tab-3"
-                                data-mdb-toggle="tab"
-                                href="#ex3-tabs-3"
-                                role="tab"
-                                aria-controls="ex3-tabs-3"
-                                aria-selected="false"
-                                >Another link</a
+                                >Bank details</a
                                 >
                             </li>
                         </ul>
@@ -55,31 +43,19 @@
                                 role="tabpanel"
                                 aria-labelledby="ex3-tab-1"
                             >
-                            Tab 1 content
-                            </div>
-                            <div
-                                class="tab-pane fade"
-                                id="ex3-tabs-2"
-                                role="tabpanel"
-                                aria-labelledby="ex3-tab-2"
-                            >
                                 <form class="personal-info">
-                                    <!-- 2 column grid layout with text inputs for the first and last names -->
-                                    <div class="row mb-4">
-                                        <div class="col">
-                                            <div class="form-outline">
-                                                <input type="text" id="__firstName" class="form-control" />
-                                                <label class="form-label" for="__firstName">First name</label>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="form-outline">
-                                                <input type="text" id="__lastName" class="form-control" />
-                                                <label class="form-label" for="__lastName">Last name</label>
-                                            </div>
-                                        </div>
+                                    <!-- First-name input -->
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="__firstName" class="form-control" />
+                                        <label class="form-label" for="__firstName">First name</label>
                                     </div>
 
+                                    <!-- Last-name input -->
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="__lastName" class="form-control" />
+                                        <label class="form-label" for="__lastName">Last name</label>
+                                    </div>
+                                    
                                     <!-- Email input -->
                                     <div class="form-outline mb-4">
                                         <input type="email" id="__email" class="form-control" />
@@ -102,6 +78,12 @@
                                     <div class="form-outline mb-4">
                                         <textarea class="form-control" id="__address" rows="4"></textarea>
                                         <label class="form-label" for="__address">Address</label>
+                                    </div>
+
+                                    <!-- state input -->
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="__state" class="form-control" />
+                                        <label class="form-label" for="__state">State</label>
                                     </div>
 
                                     <!-- Sex input -->
@@ -128,11 +110,38 @@
                             </div>
                             <div
                                 class="tab-pane fade"
-                                id="ex3-tabs-3"
+                                id="ex3-tabs-2"
                                 role="tabpanel"
-                                aria-labelledby="ex3-tab-3"
+                                aria-labelledby="ex3-tab-2"
                             >
-                            Tab 3 content
+                            <form class="personal-info">
+                                    <!-- Bank-name input -->
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="__bankName" class="form-control" />
+                                        <label class="form-label" for="__bankName">Name of Bank</label>
+                                    </div>
+
+                                    <!-- Account-name input -->
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="__accountName" class="form-control" />
+                                        <label class="form-label" for="__accountName">Account name</label>
+                                    </div>
+                                    
+                                    <!-- Account-number input -->
+                                    <div class="form-outline mb-4">
+                                        <input type="number" id="__accountNo" class="form-control" />
+                                        <label class="form-label" for="__accountNo">Account Number</label>
+                                    </div>
+
+                                    <!-- sort-code input -->
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="__sortCode" class="form-control" />
+                                        <label class="form-label" for="__sortCode">SortCode</label>
+                                    </div>
+
+                                    <!-- Submit button -->
+                                    <div style="text-align: center;"><button type="submit" class="btn btn-primary">Sign in</button></div>
+                            </form>
                             </div>
                         </div>
                         <!-- Tabs content -->

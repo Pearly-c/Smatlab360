@@ -95,7 +95,8 @@ if($result >= 0) {
                             <a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>&times;</a>
                             <div class='overlay-content'>
                                 <a href='../index.php' onclick='closeNav()'>Home</a>
-                                <a href='index.php'>Profile</a>
+                                <a href='../profile/profile.php'>Profile</a>
+                                <a href='../profile/index.php'>Referrals</a>
                                 <a href='#'>Entrepreneur</a>
                                 <a href='deposit.php'>Payment</a>
                                 <a href='withdraw.php'>withdrawal</a>
