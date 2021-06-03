@@ -26,7 +26,7 @@
                                 id="ex3-tab-2"
                                 data-mdb-toggle="tab"
                                 href="#ex3-tabs-2"
-                                role="tab"
+                                 role="tab"
                                 aria-controls="ex3-tabs-2"
                                 aria-selected="false"
                                 >Bank details</a
