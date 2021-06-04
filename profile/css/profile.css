@@ -151,6 +151,7 @@ body{
 .main-bd{
     width: 100%;
 }
+
 .referals > div:first-child{
     text-align: center!important;
     font-size: 20px;
@@ -384,7 +385,7 @@ section:nth-child(2) > div{
     width: 25%;
     padding-top: 20px;
     padding-left: 7%;
-   
+    box-shadow: 1px 0px 0px 0px rgba(0, 0, 0, .2);
 }
 .menu span:hover{
     cursor: pointer;
