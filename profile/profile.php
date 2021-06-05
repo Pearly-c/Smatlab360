@@ -1,6 +1,17 @@
 <?php include('profileheader.php'); ?>
             <!--Profile End-->       
            <!---Referals-->
+              <?php        
+include('../db.php');
+
+$id = $_SESSION['username'];
+
+$stmt = $conn->prepare("SELECT * FROM users WHERE username=?"); 
+$stmt->bind_param("i", $id);
+$stmt->execute();
+$row = $stmt->get_result();
+$result= $row->fetch_assoc();
+?> 
            <section class="bio ">
                 <div class="my-row" style="height: auto; overflow: hidden;">
                     <?php include('head.php'); ?>
@@ -44,46 +55,42 @@
                                 aria-labelledby="ex3-tab-1"
                             >
                                 <form class="personal-info">
+                                    <!-- id -->
+                                    <div class="form-outline mb-4">
+                                        <input type="hidden" name="id"> value="<?php echo $result['id']; ?>" id="__firstName" class="form-control" />
+                                        
+                                    </div>
                                     <!-- First-name input -->
                                     <div class="form-outline mb-4">
-                                        <input type="text" id="__firstName" class="form-control" />
+                                        <input type="text" name="first" value="<?php echo $result['firstname']; ?>" id="__firstName" class="form-control" />
                                         <label class="form-label" for="__firstName">First name</label>
                                     </div>
 
                                     <!-- Last-name input -->
                                     <div class="form-outline mb-4">
-                                        <input type="text" id="__lastName" class="form-control" />
+                                        <input type="text" value="<?php echo $result['lastname']; ?>" id="__lastName" class="form-control" />
                                         <label class="form-label" for="__lastName">Last name</label>
                                     </div>
-                                    
+                                    <!-- Image -->
+                                    <div class="form-outline mb-4">
+                                        <input type="file" value="<?php echo $result['lastname']; ?>" id="__lastName" class="form-control" />
+                                    </div>
                                     <!-- Email input -->
                                     <div class="form-outline mb-4">
-                                        <input type="email" id="__email" class="form-control" />
+                                        <input type="email" name="" value="<?php echo $result['email']; ?>" id="__email" class="form-control" />
                                         <label class="form-label" for="__email">Email address</label>
                                     </div>
 
                                     <!-- Password input -->
                                     <div class="form-outline mb-4">
-                                        <input type="number" id="__phone" class="form-control" />
+                                        <input type="number" value="<?php echo $result['phone']; ?>" id="__phone" class="form-control" />
                                         <label class="form-label" for="__phone">Phone</label>
                                     </div>
                                     
                                     <!-- Date of birth input -->
                                     <div class="form-outline mb-4">
-                                        <input type="text" id="__birthDate" class="form-control" />
+                                        <input type="date" value="<?php echo $result['dob']; ?>" id="__birthDate" class="form-control" />
                                         <label class="form-label" for="__birthDate">Date of birth</label>
-                                    </div>
-
-                                    <!-- Address input -->
-                                    <div class="form-outline mb-4">
-                                        <textarea class="form-control" id="__address" rows="4"></textarea>
-                                        <label class="form-label" for="__address">Address</label>
-                                    </div>
-
-                                    <!-- state input -->
-                                    <div class="form-outline mb-4">
-                                        <input type="text" id="__state" class="form-control" />
-                                        <label class="form-label" for="__state">State</label>
                                     </div>
 
                                     <!-- Sex input -->
@@ -105,7 +112,7 @@
                                     </div>
 
                                     <!-- Submit button -->
-                                    <div style="text-align: center;"><button type="submit" class="btn btn-primary">Sign in</button></div>
+                                    <div style="text-align: center;"><button type="submit" class="btn btn-primary">Update</button></div>
                                 </form>
                             </div>
                             <div
@@ -114,33 +121,33 @@
                                 role="tabpanel"
                                 aria-labelledby="ex3-tab-2"
                             >
-                            <form class="personal-info">
+                            <form action="" method="POST" class="personal-info">
                                     <!-- Bank-name input -->
                                     <div class="form-outline mb-4">
-                                        <input type="text" id="__bankName" class="form-control" />
+                                        <input type="text" value="<?php echo $result['bank']; ?>" id="__bankName" class="form-control" />
                                         <label class="form-label" for="__bankName">Name of Bank</label>
                                     </div>
 
                                     <!-- Account-name input -->
                                     <div class="form-outline mb-4">
-                                        <input type="text" id="__accountName" class="form-control" />
+                                        <input type="text" name="" value="<?php echo $result['accname']; ?>" id="__accountName" class="form-control" />
                                         <label class="form-label" for="__accountName">Account name</label>
                                     </div>
                                     
                                     <!-- Account-number input -->
                                     <div class="form-outline mb-4">
-                                        <input type="number" id="__accountNo" class="form-control" />
+                                        <input type="number" value="<?php echo $result['accnum']; ?>" name="" id="__accountNo" class="form-control" />
                                         <label class="form-label" for="__accountNo">Account Number</label>
                                     </div>
 
                                     <!-- sort-code input -->
                                     <div class="form-outline mb-4">
-                                        <input type="text" id="__sortCode" class="form-control" />
-                                        <label class="form-label" for="__sortCode">SortCode</label>
+                                        <input type="text" name="" value="<?php echo $result['sort']; ?>" id="__sortCode" class="form-control" placeholder="Optional" />
+                                        <label class="form-label" for="__sortCode">SortCode (Optional)</label>
                                     </div>
 
                                     <!-- Submit button -->
-                                    <div style="text-align: center;"><button type="submit" class="btn btn-primary">Sign in</button></div>
+                                    <div style="text-align: center;"><button type="submit" class="btn btn-primary">Update</button></div>
                             </form>
                             </div>
                         </div>
