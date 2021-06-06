@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+'<?php include('header.php'); ?>
 	<!-- banner -->
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 		<!-- Indicators -->

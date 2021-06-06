@@ -28,7 +28,7 @@ $result= $row->fetch_assoc();
                                 role="tab"
                                 aria-controls="ex3-tabs-1"
                                 aria-selected="true"
-                                >Personal information</a
+                                >Edit Personal information</a
                                 >
                             </li>
                             <li class="nav-item" role="presentation">
@@ -54,7 +54,7 @@ $result= $row->fetch_assoc();
                                 role="tabpanel"
                                 aria-labelledby="ex3-tab-1"
                             >
-                                <form class="personal-info">
+                                <form action="updateprof.php" method="post" class="personal-info" enctype="multipart/form-data">
                                     <!-- id -->
                                     <div class="form-outline mb-4">
                                         <input type="hidden" name="id" value="<?php echo $result['id']; ?>" id="__firstName" class="form-control" />
@@ -75,12 +75,7 @@ $result= $row->fetch_assoc();
                                     <div class="form-outline mb-4">
                                         <input type="file" name="image" value="<?php echo $result['lastname']; ?>" id="__lastName" class="form-control" />
                                     </div>
-                                    <!-- Email input -->
-                                    <div class="form-outline mb-4">
-                                        <input type="email" name="email" value="<?php echo $result['email']; ?>" id="__email" class="form-control" />
-                                        <label class="form-label" for="__email">Email address</label>
-                                    </div>
-
+                                  
                                     <!-- Password input -->
                                     <div class="form-outline mb-4">
                                         <input type="number" name="phone" value="<?php echo $result['phone']; ?>" id="__phone" class="form-control" />
@@ -89,7 +84,7 @@ $result= $row->fetch_assoc();
                                     
                                     <!-- Date of birth input -->
                                     <div class="form-outline mb-4">
-                                        <input type="date" name="date" value="<?php echo $result['dob']; ?>" id="__birthDate" class="form-control" />
+                                        <input type="date" name="dob" value="<?php echo $result['dob']; ?>" id="__birthDate" class="form-control" />
                                         <label class="form-label" for="__birthDate">Date of birth</label>
                                     </div>
 
@@ -105,14 +100,14 @@ $result= $row->fetch_assoc();
                                         <input
                                             class="form-check-input"
                                             type="radio"
-                                            name="flexRadioDefault"
+                                            name="sex"
                                             id="__female"
                                         />
                                         <label class="form-check-label" for="__female"> Female</label>
                                     </div>
 
                                     <!-- Submit button -->
-                                    <div style="text-align: center;"><button type="submit" class="btn btn-primary">Update</button></div>
+                                    <div style="text-align: center;"><button type="submit" name="update" class="btn btn-primary">Update</button></div>
                                 </form>
                             </div>
                             <div
@@ -121,33 +116,33 @@ $result= $row->fetch_assoc();
                                 role="tabpanel"
                                 aria-labelledby="ex3-tab-2"
                             >
-                            <form action="" method="POST" class="personal-info">
+                            <form action="updateprof.php" method="POST" class="personal-info">
                                     <!-- Bank-name input -->
                                     <div class="form-outline mb-4">
-                                        <input type="text" value="<?php echo $result['bank']; ?>" id="__bankName" class="form-control" />
+                                        <input type="text" name="bank" value="<?php echo $result['bank']; ?>" id="__bankName" class="form-control" />
                                         <label class="form-label" for="__bankName">Name of Bank</label>
                                     </div>
 
                                     <!-- Account-name input -->
                                     <div class="form-outline mb-4">
-                                        <input type="text" name="" value="<?php echo $result['accname']; ?>" id="__accountName" class="form-control" />
+                                        <input type="text" name="accname" value="<?php echo $result['accname']; ?>" id="__accountName" class="form-control" />
                                         <label class="form-label" for="__accountName">Account name</label>
                                     </div>
                                     
                                     <!-- Account-number input -->
                                     <div class="form-outline mb-4">
-                                        <input type="number" value="<?php echo $result['accnum']; ?>" name="" id="__accountNo" class="form-control" />
+                                        <input type="number" name="accnumb" value="<?php echo $result['accnum']; ?>" name="" id="__accountNo" class="form-control" />
                                         <label class="form-label" for="__accountNo">Account Number</label>
                                     </div>
 
                                     <!-- sort-code input -->
                                     <div class="form-outline mb-4">
-                                        <input type="text" name="" value="<?php echo $result['sort']; ?>" id="__sortCode" class="form-control" placeholder="Optional" />
+                                        <input type="text" name="sort" value="<?php echo $result['sort']; ?>" id="__sortCode" class="form-control" placeholder="Optional" />
                                         <label class="form-label" for="__sortCode">SortCode (Optional)</label>
                                     </div>
 
                                     <!-- Submit button -->
-                                    <div style="text-align: center;"><button type="submit" class="btn btn-primary">Update</button></div>
+                                    <div style="text-align: center;"><button type="submit" name="submit" class="btn btn-primary">Update</button></div>
                             </form>
                             </div>
                         </div>
