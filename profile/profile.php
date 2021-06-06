@@ -57,7 +57,7 @@ $result= $row->fetch_assoc();
                                 <form class="personal-info">
                                     <!-- id -->
                                     <div class="form-outline mb-4">
-                                        <input type="hidden" name="id"> value="<?php echo $result['id']; ?>" id="__firstName" class="form-control" />
+                                        <input type="hidden" name="id" value="<?php echo $result['id']; ?>" id="__firstName" class="form-control" />
                                         
                                     </div>
                                     <!-- First-name input -->
@@ -68,28 +68,28 @@ $result= $row->fetch_assoc();
 
                                     <!-- Last-name input -->
                                     <div class="form-outline mb-4">
-                                        <input type="text" value="<?php echo $result['lastname']; ?>" id="__lastName" class="form-control" />
+                                        <input type="text" name="lname" value="<?php echo $result['lastname']; ?>" id="__lastName" class="form-control" />
                                         <label class="form-label" for="__lastName">Last name</label>
                                     </div>
                                     <!-- Image -->
                                     <div class="form-outline mb-4">
-                                        <input type="file" value="<?php echo $result['lastname']; ?>" id="__lastName" class="form-control" />
+                                        <input type="file" name="image" value="<?php echo $result['lastname']; ?>" id="__lastName" class="form-control" />
                                     </div>
                                     <!-- Email input -->
                                     <div class="form-outline mb-4">
-                                        <input type="email" name="" value="<?php echo $result['email']; ?>" id="__email" class="form-control" />
+                                        <input type="email" name="email" value="<?php echo $result['email']; ?>" id="__email" class="form-control" />
                                         <label class="form-label" for="__email">Email address</label>
                                     </div>
 
                                     <!-- Password input -->
                                     <div class="form-outline mb-4">
-                                        <input type="number" value="<?php echo $result['phone']; ?>" id="__phone" class="form-control" />
+                                        <input type="number" name="phone" value="<?php echo $result['phone']; ?>" id="__phone" class="form-control" />
                                         <label class="form-label" for="__phone">Phone</label>
                                     </div>
                                     
                                     <!-- Date of birth input -->
                                     <div class="form-outline mb-4">
-                                        <input type="date" value="<?php echo $result['dob']; ?>" id="__birthDate" class="form-control" />
+                                        <input type="date" name="date" value="<?php echo $result['dob']; ?>" id="__birthDate" class="form-control" />
                                         <label class="form-label" for="__birthDate">Date of birth</label>
                                     </div>
 
@@ -98,7 +98,7 @@ $result= $row->fetch_assoc();
                                         <input
                                             class="form-check-input"
                                             type="radio"
-                                            name="flexRadioDefault"
+                                            name="sex"
                                             id="__male"
                                         />
                                         <label class="form-check-label" for="__male"> Male </label>
