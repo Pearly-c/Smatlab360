@@ -11,17 +11,17 @@ $lastname = $_POST['lname'];
 $dob = $_POST['dob'];
 $phone = $_POST['phone'];
 $gender = $_POST['sex'];
-$image = $_FILES['image']['name'];
+//$image = $_FILES['image']['name'];
 $username = $_SESSION['username'];
 
   	// image file directory
-$target = "images/".basename($image);
+//$target = "images/".basename($image);
 
-	if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-	$update="UPDATE users SET id=?, firstname=?, lastname=?, phone=?, dob=?, picimage=? WHERE username=?";
+	//if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+	$update="UPDATE users SET id=?, firstname=?, lastname=?, phone=?, dob=? WHERE username=?";
 
 	$stmt = $conn->prepare($update);
-	$stmt->bind_param("issssss", $id, $firstname, $lastname, $phone, $dob, $image, $username);
+	$stmt->bind_param("isssss", $id, $firstname, $lastname, $phone, $dob, $username);
 	$stmt->execute();
 	if($stmt->execute()) {
 		header("Location: index.php" );
@@ -31,7 +31,6 @@ $target = "images/".basename($image);
 
 }
 
-}
 
 
 

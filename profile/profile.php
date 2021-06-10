@@ -1,18 +1,9 @@
 <?php include('profileheader.php'); ?>
             <!--Profile End-->       
            <!---Referals-->
-              <?php        
-include('../db.php');
 
-$id = $_SESSION['username'];
 
-$stmt = $conn->prepare("SELECT * FROM users WHERE username=?"); 
-$stmt->bind_param("i", $id);
-$stmt->execute();
-$row = $stmt->get_result();
-$result= $row->fetch_assoc();
-?> 
-           <section class="bio ">
+          <section class="bio ">
                 <div class="my-row" style="height: auto; overflow: hidden;">
                     <?php include('head.php'); ?>
                     <div class="referals">
@@ -68,17 +59,14 @@ $result= $row->fetch_assoc();
 
                                     <!-- Last-name input -->
                                     <div class="form-outline mb-4">
-                                        <input type="text" name="lname" value="<?php echo $result['lastname']; ?>" id="__lastName" class="form-control" />
+                                        <input type="text" name="lname" value="<?php echo $result['lastname']; ?>" id="__lastName" class="form-control"  required/>
                                         <label class="form-label" for="__lastName">Last name</label>
                                     </div>
                                     <!-- Image -->
-                                    <div class="form-outline mb-4">
-                                        <input type="file" name="image" value="<?php echo $result['lastname']; ?>" id="__lastName" class="form-control" />
-                                    </div>
                                   
                                     <!-- Password input -->
                                     <div class="form-outline mb-4">
-                                        <input type="number" name="phone" value="<?php echo $result['phone']; ?>" id="__phone" class="form-control" />
+                                        <input type="number" name="phone" value="<?php echo $result['phone']; ?>" id="__phone" class="form-control" required/>
                                         <label class="form-label" for="__phone">Phone</label>
                                     </div>
                                     
@@ -101,7 +89,7 @@ $result= $row->fetch_assoc();
                                             class="form-check-input"
                                             type="radio"
                                             name="sex"
-                                            id="__female"
+                                            id="__male"
                                         />
                                         <label class="form-check-label" for="__female"> Female</label>
                                     </div>
@@ -153,6 +141,11 @@ $result= $row->fetch_assoc();
             <!---Referals End-->
         </main>
     <!--- Script Source Files -->
+    <script>
+function myFunction() {
+  document.getElementById("__male").required = true;
+}
+</script>
         <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
         <script src="js/profile.js"></script>
         <!--- End of Script Source Files -->
