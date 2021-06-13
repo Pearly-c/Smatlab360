@@ -44,7 +44,7 @@ Our approach is quite unconventional, exciting and guarantees ultimate success. 
 	<!--/what-->
 	<div class="works" id="works">
 		<div class="container">
-			<h3 class="tittle-w3ls cen">How it Works</h3>
+			<h3 class="tittle-w3ls cen">Our Affiliate Plan</h3>
 			<div class="inner_sec_info_wthree_agile">
 				<div class="ser-first">
 					<div class="col-md-3 ser-first-grid text-center">
