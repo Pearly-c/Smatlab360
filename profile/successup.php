@@ -25,7 +25,7 @@
         <div class="modal-dialog">
             <div class="modal-content" align="center">
                 <div class="modal-header" style="display: block; text-align: center;">
-                    <img src="logo2.png">
+                    <img src="../logo2.png">
                 </div>
                 <div class="modal-body">
                     <p><strong>Profile Updated Successfully</strong></p>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="modal-footer">
                     
-                    <a href="profile/index.php"> <button type="button" class="btn btn-primary">Go to Account</button></a>
+                    <a href="index.php"> <button type="button" class="btn btn-primary">Go to Account</button></a>
                 </div>
             </div>
         </div>
