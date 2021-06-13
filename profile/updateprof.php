@@ -24,7 +24,7 @@ $username = $_SESSION['username'];
 	$stmt->bind_param("isssss", $id, $firstname, $lastname, $phone, $dob, $username);
 	$stmt->execute();
 	if($stmt->execute()) {
-		header("Location: index.php" );
+		header("Location: successup.php" );
 	}else{
 	header("location: profile.php");
 }
